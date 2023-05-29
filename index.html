@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+        html, body {
+            box-sizing: border-box;
+            display: inline-block;
+            width: 100%;
+        }
+        p, span {
+            font-size: 12px;
+        }
+        .btn_aqua{
+            
+            background-color: aqua;
+            border: 1px solid aquamarine;
+            border-radius: 3px;;
+        }
+        .btn_aqua > div {
+            margin: 16px;
+        }
+        .btn_red {
+            padding: 8px 16px;
+            background-color: red;
+            border: 1px solid red;
+            border-radius: 3px;;
+            color: #FFF;
+        }
+        .block {
+            
+            margin: 0 4px;
+        }
+        .rectangulo {
+            border: 1px solid blue;
+            width: 300px;
+            height: 200px;
+            margin: 0 auto;
+            vertical-align: middle;
+        }
+        .container {
+            position: relative;
+            overflow: hidden;
+            border: 1px solid red;
+        }
+        .w300 {
+            width: 300px;
+        }
+        .spacer {
+            padding: 20px;
+        }
+        .container-blue {
+            position: relative;
+            
+            overflow: hidden;
+            border: 1px solid blue;
+            width: 100%;
+        }
+        .container-blue > button {
+            margin: 0 auto;
+        }
+        .margin-center {
+            margin: 0 auto;
+        }
+        .red {
+            border: 1px solid red;
+        }
+        .box {
+            width: 100px;
+            height: 100px;
+            border: 1px solid;
+        }
+
+        .margin-spacing {
+            margin: 10px;
+        }
+        .title-2 {
+            font-size: 24px;
+        }
+        .h300 {
+            height: 200px;
+        }
+        .h100 {
+            height: 100px;
+        }
+        .flexible {
+            display: flex;
+        }
+        .valign {
+            vertical-align: middle;
+        }
+        .vertical-center-flex-align {
+            align-items: center;
+        }
+        .horizontal-center-flex-align {
+            justify-content: center;
+        }
+        .autocenter {
+            align-self: auto;
+        }
+        .inline {
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <!-- <button type="button" class="btn_aqua block" name="btn_alerta" id="btn_alerta">
+        <span>Alerta</span>
+    </button> -->
+    <h4>1. Reglas de centrado</h4>
+    <div class="container">
+        <div class="container margin-spacing h100 flexible vertical-center-flex-align horizontal-center-flex-align">
+            <div class="title-2">
+                Centrado al centro del contenedor con flex
+            </div>
+        </div>
+        <div class="container margin-spacing h100 flexible vertical-center-flex-align">
+            <div class="title-2">
+                Centrado vertical con flex
+            </div>
+        </div>
+        <div class="container margin-spacing h100 flexible horizontal-center-flex-align">
+            <div class="title-2">
+                Centrado horizontal con flex
+            </div>
+        </div>
+        <div class="container margin-spacing h100 flexible">
+            <div class="title-2 margin-center">
+                Centrado horizontal con margen
+            </div>
+        </div>
+        <div class="container margin-spacing h100 flexible">
+            <div class="title-2 margin-center">
+                Centrado horizontal con margen
+            </div>
+        </div>
+    </div>
+
+    <h4>2. Utilizar margin en vez de padding cuando (sea posible) para separaciones entre elementos</h4>
+
+    <div class="container flexible h300">
+        <div class="box margin-spacing">
+            <p class="margin-spacing">Cuadrado que se separa de los border usando la propiedad <u>margin</u></u></p>
+        </div>
+        <div class="box margin-spacing">
+            <span class="margin-spacing">No utilizar margin en etiquetas <b>span</b> ya que no funciona el espaciado vertical (arriba a abajo)</span>
+        </div>
+    </div>
+</body>
+</html>

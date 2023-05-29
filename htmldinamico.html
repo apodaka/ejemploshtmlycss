@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulación del DOM con HTML</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+        html, body {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+        }
+        p, span {
+            font-size: 20px;
+        }
+        .container, .columns {
+            display: flex;
+            flex-direction: column;
+        }
+        .footer-container {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            margin: 14px;
+        }
+
+        .footer-container > h4 { 
+            font-size: 16px;
+        }
+        .footer-container > span {
+            font-size: 12px;
+            color: #8c8c8c
+        }
+        .paper-container {
+            box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+            transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+            padding: 16px;
+        }
+
+        .space-top {
+            margin-top: 16px;
+        }
+
+        .form-container {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            align-items: space-around;
+        }
+        .form-container > span {
+
+        }
+
+        .form-container.row {
+            flex-direction: row;
+        }
+
+        .form-container.left {
+            align-items: flex-start;
+        }
+        
+        input[type=text] {
+            padding: 10px 4px;
+            border: 1px solid #EAEAEA;
+            border-radius: 8px;
+        }
+        .full-width {
+            width: 100%;
+        }
+        
+        select {
+            padding: 10px 4px;
+            border: 1px solid #EAEAEA;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+            max-width: 300px;
+        }
+        select:hover {
+            background: rgba(0,0,0,0.1);
+        }
+        .select-data-show {
+            width: 400px;;
+        }
+        .space-left-8 {
+            margin-left: 8px;
+        }
+        .descriptor p {
+            margin: 16px;
+        }
+        .hidden {
+            display: none;
+        }
+        .main-container {
+            margin: 16px;
+        }
+        .select-form-container, .input-form-container {
+            height: 100px;
+            font-size: 24px;
+        }
+        #id_div_jsonobject {
+            width: 200px;
+            background-color: rgba(0,0,0,0.1);
+        }
+        #id_div_jsonobject pre{
+            padding: 10px;
+        }
+        .block {
+            display: block;
+        }
+        .hide {
+            display: none;
+        }
+        .breakpoint-container {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            flex-wrap: wrap;
+            width: 300px;
+            border: 1px solid black;
+        }
+        /* BREAKPOINTS CSS */
+        .box {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 130px;
+            height: 130px;
+            max-width: 100px;
+            border: 1px solid blue;
+            margin: 10px;
+        }
+        button.btn_primary {
+            border: 0;
+            background: #0077b6;
+            color: #FFF;
+            border-radius: 6px;
+            padding: 10px 12px;
+            cursor: pointer;
+        }
+
+        .form-space-bottom {
+            margin-bottom: 30px;
+        }
+
+        button.btn_primary:hover {
+            background: #056ba1;
+        }
+        
+        #breakpoint-root {
+            width: 100%;
+        }
+        .jumbotron {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+        }
+
+        .wrap-center {
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        @media (min-width: 1366px) and (max-width: 1919px) {
+            .container {        
+                font-size: 24px;
+                color: red;
+            }
+            .jumbotron {
+                height: 300px;
+                background: green;
+            }
+        }
+        @media (max-width: 1366px){
+            .container {        
+                font-size: 24px;
+                color: blueviolet;
+            }
+            .jumbotron {
+                height: 300px;
+                background: pink;
+            }
+        }
+        @media (max-width: 360px){
+            .container {        
+                font-size: 24px;
+                color: yellow;
+            }
+            .jumbotron {
+                height: 300px;
+                width: 300px;
+                background: violet;
+                display: flex;
+                flex-direction: row;
+            }
+        }
+    </style>
+    <script type="text/javascript" src="./utils.js"></script>
+</head>
+<body>
+    <!-- <button type="button" class="btn_aqua block" name="btn_alerta" id="btn_alerta">
+        <span>Alerta</span>
+    </button> -->
+    <div class="descriptor" id="div_loading">
+        <p>Cargando datos (Simula la carga del llamado a una API) ...</p>
+    </div>
+    <div class="main-container hidden" id="root">
+        <h1>Conocimiento básico de HTML y CSS</h1>
+        <div class="descriptor">
+            <h2>Objetivo</h2>
+            <p>El objetivo de este documento es demostrar cómo agregar opciones elementos a un dropdown, identificarlos por su ID de objeto, manipular la información
+                de un objeto u arreglo y agregar elementos dinámicamente a través de javascript. El código viene documentado y con ejemplos simples
+            </p>
+            <p></p>
+        </div>
+        <div class="descriptor">
+            Objeto de JSON que se utiliza para crear las opciones del select
+        </div>
+        <div class="form-container left" id="div_id_json_data">
+            <div class="form-container left">
+                <div id="id_div_jsonobject">
+                    <h3>Elementos del objeto que crea las opciones</h3>
+                    <pre></pre>
+                </div>
+                <div id="id_div_jsonobject_selected">
+                    <h3>Elemento del JSON seleccionado por ID</h3>
+                    <pre></pre>
+                </div>
+            </div>
+            <div class="paper-container form-space-bottom">
+                <div class="margin-container columns">
+                    <h3>Agregar persona nueva</h3>
+                    <input type="text" id="txt_nombre_persona" name="txt_nombre_persona" placeholder="Nombre de la persona" />
+                    <input type="text" id="txt_edad_persona" name="txt_edad_persona" placeholder="Edad" class="space-top" />
+                    <button type="button" name="btn_agregar_persona" id="btn_agregar_persona" class="btn_primary space-top">
+                        + Agregar persona
+                    </button>
+                </div>
+            </div>
+            <div class="form-container row">
+                <button type="button" id="btn_cargar_selects" class="btn_primary">
+                    Cargar elementos del select
+                </button>
+                <select name="select_dynamic_options" id="select_dynamic_options_1" class="space-left-8">
+                    <option value="">Cargar opciones al hacer clic al bot&oacute;n</option>
+                </select>
+            </div>
+            <div class="form-container paper-container left space-top select-data-show">
+                <div class="cls_selected_index_1"></div>
+                <div class="cls_selected_value_1"></div>
+                <div class="cls_selected_text_1"></div>
+            </div>
+        </div>
+        <div class="container" id="root-container">
+           
+            <div class="form-container">
+                <div class="select-form-container hide">
+                    <select name="select_dynamic_options" id="select_dynamic_options_2">
+                        <option value="">Cargar opciones al hacer clic al bot&oacute;n</option>
+                    </select>
+                </div>
+                <div class="select-info-container hide">
+                    <div class="cls_selected_index_2"></div>
+                    <div class="cls_selected_value_2"></div>
+                    <div class="cls_selected_text_2"></div>
+                </div>
+            </div>
+            <div class="form-container">
+                <!-- <div class="input-form-container">
+                    <input type="text" class="full-width" disabled id="text_selected_option" placeholder="Opci&oacute;n seleccionada" />
+                </div> -->
+            </div>
+        </div>
+        
+        <div id="breakpoint-root">
+            <h1>Breakpoints</h1>
+            <h3>Dimensiones: width x height</h3>
+            <ul> 
+                <li>Escritorio: 1366x768px</li>
+                <li>Escritorio (Grande): 1920x1080px</li>
+                <li>Mobile: 360x960</li>
+            </ul>
+            <h3 id="screen-size"></h3>
+            <div id="div_id_breakpoint_container" class="container jumbotron wrap-center">
+                <div id="div_id_title_size"></div>
+                <div class="box">
+                    <h3>width: 100px;</h3>
+                </div>
+                <div class="box">
+                    <h3>width: 100px;</h3>
+                </div>
+                <div class="box">
+                    <h3>width: 100px;</h3>
+                </div>
+            </div>
+        </div>
+        <div id="div_id_container_input">
+
+        </div>
+        <div class="footer-container">
+            <hr />
+            <span class="spn-title">Autor del documento</span>
+            <span>Jes&uacute;s Erubiel Apodaca Soto</span>
+            <br />
+            <span>Mayo 2023</span>
+        </div>
+    </div>
+
+    <script>
+        /**
+         * Esta función se ejecuta al terminar de cargarse el documento
+        */
+        window.onload = function(){
+            /**
+             * Retorna un elmeento de HTML utilizando selectores de CSS, igual que JQuery
+            */
+            function htmlElement(elemSelector = '') {
+                 const elems = document.querySelectorAll(elemSelector) || undefined;
+                 return elems && elems.length === 1 ? elems[0] : undefined
+            }
+
+            const selectEleme = htmlElement('#select_dynamic_options_1');
+            const selectElem2 = htmlElement('#select_dynamic_options_2');
+            const btnLoadSelectData = htmlElement("#btn_cargar_selects");
+            let DATA = []
+            /**
+             * Simula una llamada api que retorna un arreglo de información, dura 2 segundos 
+            */
+            const loadApiData = function(){
+                return new Promise((resolve, reject) => {
+                    try {
+                        setTimeout(function(){
+                            DATA = [
+                                {
+                                    id: 'ID1',
+                                    nombre: 'Erubiel',
+                                    edad: 32
+                                },
+                                {
+                                    id: 'ID2',
+                                    nombre: 'Imanol',
+                                    edad: 24
+                                },
+                                {
+                                    id: 'ID3',
+                                    nombre: 'Luis',
+                                    edad: 28
+                                }
+                            ]
+                            htmlElement("#id_div_jsonobject").innerHTML = '<pre>' + JSON.stringify(DATA, null, 2) + '</pre>'
+                            resolve(DATA)
+                        }, 100)
+                    } catch (error) {
+                        reject(error)
+                    }
+                })
+            }
+            const loadJSONView = function loadJSONView(data) {
+                htmlElement("#id_div_jsonobject").innerHTML = '<pre>' + JSON.stringify(data, null, 2) + '</pre>'
+            }
+            /**
+             * elimina una clase a la lista de clases en el atributo class
+             * de un elemento que se envíe
+             * 
+             * @returns void
+            */
+            const removeElemClass = function removeElemClass(querySelector = '', className = '') {
+                const filteredClasses = htmlElement(querySelector)
+                        .getAttribute("class")
+                        .split(' ')
+                        .filter(cls => {
+                            return cls !== className
+                        })
+                        .join(" ")
+                htmlElement(querySelector)
+                    .setAttribute("class", filteredClasses)
+            }
+            /**
+             * Agrega una clase al final de la lista de clases en el atributo class
+             * de un elemento que se envíe
+             * 
+             * @returns void
+            */
+            const appendElemClass = function removeElemClass(querySelector = '', className = '') {
+                const filteredClasses = htmlElement(querySelector)
+                        .getAttribute("class")
+                        .split(' ')
+                        .push(className)
+                        .join(" ")
+                htmlElement(querySelector)
+                    .setAttribute("class", filteredClasses)
+            }
+
+            const loadSelectOptions = function loadSelectOptions(data){
+                selectEleme.innerHTML = '';
+                let htmlOptions = '<option value="">Cargar opciones al hacer clic al bot&oacute;n</option>'
+                console.log("htmlOptions", htmlOptions)
+                for (var i = 0; i < data.length; i++) {
+                        const dato = data[i] // SE SELECCIONA EL OBJETO { id: 1, nombre: 'Erubiel', edad: 32}
+                        // CONCATENAMOS LO QUE YA TENÍA LA VARIABLE PARA ASIGNARLE MÁS TEXTO, Y SE CREA LAS OPCIONES PARA 
+                        // ASIGNAR EL IDENTIFICADOR DEL OBJETO A LA OPCIÓN VALUE, PARA POSTERIORMENTE PODER SELECCIONARLO.
+                        htmlOptions += "<option value='"+ dato.id +"'>" + dato.nombre + ' , ' + dato.edad + " A&ntilde;os</option>";
+                    }
+                    selectEleme.innerHTML = htmlOptions
+
+                    // PRIMERO HAY QUE SABER QUÉ OPCIÓN ES LA SELECCIONADA, PARA ESO
+                    // EXISTE LA PROPIEDAD SE LOS ELEMENTOS SELECT QUE SE LLAMA selectedIndex
+
+                    // EL MÉTODO forEach SE EJECUTA DE FORMA SYNCRONA, NO ES NECESARIO QUE TERMINE
+                    // SU PROCESO PARA PODER EJECUTAR LA SIGUIENTE LÍNEA DE CÓDIGO DESPUÉS DEL FOREACH
+                    // ----------------------------------------------------
+                    // EJEMPLO
+
+                    // ----------------------------------------------------
+                    selectElem2.innerHTML = '';
+                    let htmlOption2 = '<option value="">Cargar opciones al hacer clic al bot&oacute;n</option>';
+                    // SE UTILIZARÁ EL MÉTODO DE ARREGLO .map PARA RETORNAR UN ARREGLO INMUTABLE Y UTILIZAR EL ARREGLO COMO 
+                    // ELEMENTOS DEL HTML A INSERTAR. CADA ITERACIÓN DEL MAP DEBERÁ DE REGREGAR UN VALOR QUE REEMPLAZARÁ AL INDICE
+                    // QUE SE ESTÉ RECORRIENDO EN ESE MOMENTO.
+                    const arrOptions = data.map(function(elemento, index){
+                        return "<option value='"+ elemento.id +"'>" + elemento.nombre + ' , ' + elemento.edad + " A&ntilde;os</option>";
+                    })
+                    // MÉTODO .join UNE TODOS LOS ELEMENTOS DE UN ARREGLO EN UNA CADENA EN BASE A UN DELIMITADOR, SI NO SE ESPECIFICA EL DELIMINTADOR.
+                    // UNE TODOS LOS ELEMENTOS DEL ARREGLO EN UNA CADENA SIN ESPACIOS
+                    const joinedOptions = [htmlOption2].concat(arrOptions).join("");
+                    selectElem2.innerHTML = joinedOptions;
+            }
+
+            /**
+             * @function loadSelect
+             * 
+             * PRIMERO SE DEBERÁN CARGAR LOS ELEMENTOS DE UN SELECT A TRAVÉS DE UN ARREGLO
+             * PRIMERO SE SELECCIONA EL SELECT AL QUE SE LE VAN A AGREGAR LAS OPCIONES DINÁMICAMENTE
+             * RECOMIENDO HACER LAS SELECCIONES DE ELEMENTOS A TRAVÉS DEL MÉTODO QUERYSELECTOR YA QUE
+             * SE UTILIZAN SELECTORES DE CSS PARA IDENTIFICAR ELEMENTOS.
+             *
+             * PARA MÁS INFORMACIÓN SEGUIR EL SIGUIENTE ENLACE: @see https://www.w3schools.com/cssref/css_selectors.php
+             *
+             * DESPUÉS SE RECORREO EL ARREGLO PARA OBTENER SUS DATOS Y CONSTRUIR EL HTML
+             * EXISTEN VARIAS FORMAS DE RECORRER UN ARREGLO EN JAVASCRIPT
+             * 1) ciclo for << Existe en la mayoría de los lenguajes de programación
+             * 2) método forEach (Son métodos de los arreglos)
+             * LA DIFERENCIA ENTRE USAR EL FOR CLÁSICO ES QUE 
+             * EL FOR TIENE QUE TERMINAR SU EJECUCIÓN ANTES
+             * DE PODER EJECUTAR LA SIGUIENTE INSTRUCCIÓN
+             * ----------------------------------------------------
+             * @example
+             * for (condiciones) {
+             *   instrucciones
+             * }
+             * cont valor = 1 << Este valor se asigna después de terminar el ciclo for
+             * ----------------------------------------------------
+             * LA PROPIEDAD innerHTML OBTIENE EL HTML en una cadena, también sirve
+             * PARA CONSTRUIR HTML Y AGREGARLO A UN ELEMENTO CONSTRUYENDO UNA CADENA 
+            */
+            function loadSelect() {
+                // SE DEFINE LA VARIBALE QUE CONTENDRA LA CADENA QUE SE TRANSFORMARÁ A HTML
+                // Y SE AGREGA EL ELEMENTO QUE YA TENÍA
+                let htmlOptions = selectEleme.innerHTML;
+                // PRIMERO HAY QUE CREAR LAS OPCIONES QUE SE VAN A AGREGAR AL SELECT
+                loadApiData().then(function(response){
+
+                    htmlElement("#div_loading").remove();
+                    // REMUEVE LA CLASE QUE OCULTA AL CONTENEDOR PADRE PARA APARENTAR LA
+                    // CARGA DE LOS DATOS DE LA API
+                    removeElemClass('#root', 'hidden')
+                    // CARGA LAS OPCIONES DE LOS SELECT CON UN OBJETO.
+                    DATA = response;
+                })
+                
+                
+            }
+            const getValueObjectById = function getValueObjectById(id) {
+                // FILTRAR EL OBJETO QUE CREA LAS OPCIONES EN VEZ DE BUSCAR EN EL HTML
+                // LOS ELEMENTOS OPTIONS
+                DATA.forEach(function(element, index){
+                    if (element.id === id) {
+                        const elem =  document.querySelector("#id_div_jsonobject_selected")
+                        elem.innerHTML = ''
+                        const htmlData = elem.innerHTML;
+                        elem.innerHTML = htmlData + '<pre>' + JSON.stringify(element, null, 2) + '</pre>';
+                    }
+                })
+            }
+            /**
+             * EN VEZ DE UTILIZAR LA PROPIEDAD ONCLICK DEL ELEMENTOS, ES MEJOR VINCULAR UNA FUNCIÓN QUE SE EJECUTE AL EVENTO DEL SELECT DE HTML CON JAVASCRIPT
+             * SELECCIONAREMOS LA OPCIÓN CUANDO CAMBIE Y UTILIZAREMOS LOS VALORES DEL OBJETO QUE LO CONSTRUYE EN VEZ DE OBTENER LOS DATOS DEL HTML.
+            */
+
+            const onChangeInput = function onChangeInput(event){
+                const index = this.options.selectedIndex
+                const selectedValue = this.options[index].value
+                const selectedText = this.options[this.options.selectedIndex].text
+                document.querySelector('.cls_selected_index_1').innerHTML = '<p>Indice de la opci&oacute;n seleccionada: ' + index + '</p>';
+                document.querySelector('.cls_selected_value_1').innerHTML = '<p>Valor de la opci&oacute;n seleccionada: ' + selectedValue + '</p>';
+                document.querySelector('.cls_selected_text_1').innerHTML = '<p>Texto de la opci&oacute;n seleccionado: ' + selectedText + '</p>';
+                getValueObjectById(selectedValue)
+            }
+            const onResizeWindow = function onResizeWindow(){
+                calculateSizes()
+            }
+            
+            // function onClickLoadBtn(){
+            //     loadSelectOptions(DATA);
+            // }
+
+
+            const calculateSizes = function calculateSizes(){
+                // TODO: Ver porque no carga este width al comienzo.
+                const widthJumbotron = Math.round(htmlElement('#div_id_breakpoint_container').getBoundingClientRect().width);
+                const sizeText = 'Ancho de la pantalla:' + Math.round(htmlElement('body').getBoundingClientRect().width) + 'px';
+                htmlElement('#screen-size').innerHTML = sizeText;
+                // console.log("widthJumbotron", widthJumbotron)
+                htmlElement('#div_id_title_size').innerHTML = sizeText;
+            }
+            loadSelect();
+            calculateSizes();
+            // Configurando disparadores de eventos
+            selectEleme.addEventListener('change', onChangeInput)
+            selectElem2.addEventListener('change', onChangeInput)
+            
+            // retorna un document.querySelector
+            htmlElement('#btn_agregar_persona')
+                .addEventListener('click', function(event){
+                    event.preventDefault();
+
+                    const elemNombrePersona = htmlElement('#txt_nombre_persona')
+                    const elemEdadPersona = htmlElement('#txt_edad_persona')
+                    const persona = {
+                        id: 'ID' + String(DATA.length + 1).toString(),
+                        nombre: elemNombrePersona.value,
+                        edad: elemEdadPersona.value
+                    }
+                    
+                    DATA.push(persona)
+                    loadSelectOptions(DATA);
+                    elemNombrePersona.value = ''
+                    elemEdadPersona.value = ''
+                    loadJSONView(DATA)
+                })
+
+            console.log("btnLoadSelectData", btnLoadSelectData)
+            btnLoadSelectData.addEventListener('click', function(event) {
+                event.preventDefault();
+                loadSelectOptions(DATA);
+            })
+            window.addEventListener('resize', onResizeWindow)
+
+            // onReadyElement('#btn_cargar_selects')
+            //     .then(elem => {
+            //         elem.addEventListener('click', onClickLoadBtn)        
+            //     })
+            // document.querySelector("#btn_cargar_selects").addEventListener('click', function(){
+            //     alert("boton clickeado")
+            // })
+            const optionsObserver = {
+                root: '#div_id_container_input',
+                selector: 'input#id_input_buscado'
+            }
+            onReadyElement(optionsObserver, function(elem){
+                const msg = elem.outerHTML.toString()
+                    + "\n"
+                    + "Esta alerta se desencadenó debido a que se registró"
+                    + "  un evento que se disparó al crearse un elemento de html"
+                    + " [input] con id='id_input_buscado'"
+                    + " De esta manera ya no es necesario tener que crear un intervalos"
+                    + " o timeouts para verificar que dicho elemento exista"
+                alert(msg)
+            })
+
+            setTimeout(() => {
+                document.querySelector('#div_id_container_input').innerHTML += '<input type="text" id="id_input_buscado" />'
+            }, 3000)
+        }
+
+        function onReadyElement(options, cb) {
+            if (typeof options === 'object' && Object.prototype.toString.call(options) === '[object Object]') {
+                const opts = Object.assign({
+                    root: '',
+                    selector: ''
+                }, options)
+                if (document.querySelector(opts.selector)) {
+                    cb(document.querySelector(opts.selector));
+                    return;
+                }
+                const observer = new MutationObserver(mutations => {
+                    if (document.querySelector(opts.selector)) {
+                        cb(document.querySelector(opts.selector));
+                        observer.disconnect();
+                        return;
+                    }
+                });
+
+                observer.observe(document.querySelector(opts.root), {
+                    childList: true,
+                    subtree: true,
+                    attributes: true
+                });
+            }
+        }
+    </script>
+</body>
+</html>

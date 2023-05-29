@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+        }
+        * {
+          box-sizing: border-box;  
+        }
+        .wrapper {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-auto-rows: minmax(100px, auto);
+            border: 2px solid red;
+        }
+        .wrapper > div {
+            background: rgba(255, 127, 80, 05);
+            border: 2px solid  rgba(209, 109, 8, 1);
+            
+            color:#EAEAEA;
+        }
+        .subwrapper {
+            display: subgrid;
+            grid-template-columns: 1fr;
+            grid-auto-rows: minmax(100px, auto);
+            gap: 4px;
+        }
+
+        .cell-1 {
+            grid-column: 1;
+            grid-row: 1/3;
+        }
+        .cell-2 {
+            grid-row: 1/3;
+            grid-column: 2;
+        }
+        .cell-3 {
+            grid-row: 1/3;
+            grid-column: 3;
+        }
+        .subcell {
+            background: rgba(252, 219, 3, 0.3);
+            margin: 8px;
+            border-radius: 5px;
+        }
+        .subcell h3 {
+            padding: 8px;
+        }
+        .restricted-width {
+            max-width: 500px;
+        }
+
+    </style>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <div>
+        <div class="wrapper">
+            <div class="cell cell-1" id="cell">
+                <h1>Celda 1</h1>
+               <div class="subwrapper">
+                    <div class="subcell cell cell-1" id="id-sub-cell">
+                        <h3>Subcelda 1</h3>
+                    </div>
+                    <div class="subcell cell cell-1" id="id-sub-cell">
+                        <h3>Subcelda 2</h3>
+                    </div>
+                    <div class="subcell cell cell-1" id="id-sub-cell">
+                        <h3>Subcelda 2</h3>
+                    </div>
+                    <div class="subcell cell cell-1" id="id-sub-cell">
+                        <h3>Subcelda 2</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="cell-2" id="cell-2">
+                <h1>Celda 2</h1>
+            </div>
+            <div class="cell cell-3" id="cell-3">
+                <h1>Celda 3</h1>
+            </div>
+        </div>
+    </div>
+    <script>
+        window.onload = function(){
+            let intervalId;
+            const observer = new MutationObserver((mutations) => {
+                const observaCelda2 = 'cell-2'
+                mutations.forEach(node => {
+                    console.log('node type', typeof node)
+                    console.log('node', node)
+                    if (node.target.id === observaCelda2) {
+                        console.log('Se encontró la clase que se buscaba')
+                        document.getElementById(observaCelda2).style.backgroundColor = 'red';
+                    }
+                })
+                console.log('Se registró un cambio en el div con clase wrapper', mutations)
+            })
+            observer.observe(document.querySelector('body'), {
+                childList: true,
+                subtree: true,
+                attributes: true
+            });
+            let counter = 0
+        }
+    </script>
+</body>
+</html>
