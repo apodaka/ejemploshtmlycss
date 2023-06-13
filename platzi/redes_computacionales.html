@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../styles.css" />
+</head>
+
+<body>
+    <!-- Modelo TCP / IP -->
+    <div class="Resources-description">
+        <h1>Model TCP/IP</h1>
+        <p>Enlace: <a href="https://platzi.com/clases/2225-redes/35584-modelo-tcpip/">https://platzi.com/clases/2225-redes/35584-modelo-tcpip/</a></p>
+        <p>El <strong>modelo TCP</strong> (Protocolo de control de transmisión) es un conjunto de directrices que
+            establecen las formas de los mensajes y los pasos necesarios para que los dispositivos y los programas se
+            comuniquen entre sí. Estos se deben cumplir para asegurar una correcta interpretación del mensaje recibido
+            y, como modelo, fue desarrollado hace más de 30 años, para garantizar la precisión y uniformidad de los
+            intercambios de datos.</p>
+        <p>El conjunto de protocolos TCP/IP se compone de cinco niveles: la capa de aplicación, transporte, red,
+            interfaz de red y hardware. Cada uno tiene su propia función particular para garantizar una comunicación
+            adecuada entre los dispositivos conectados a la misma red. Pero, ¿cómo funciona realmente este modelo?
+            Exploremos sus cuatro capas desde la base</p>
+        <h2>¿Cómo funciona el modelo TCP/IP?</h2>
+        <p>Este modelo cuenta con 4 capas. Te las enumeramos de abajo hacia arriba:</p>
+        <ul>
+            <li>Capa 1 (Interfaz de red)</li>
+            <li>Capa 2 (internet)</li>
+            <li>Capa 3 (Transporte)</li>
+            <li>Capa 4 (Aplicación)</li>
+        </ul>
+        <figure><img
+                src="https://static.platzi.com/media/user_upload/Captura%20de%20Pantalla%202022-01-26%20a%20la%28s%29%205.30.22%20p.m.-8d0a2556-7853-45b8-b910-7cc4aa4ab30f.jpg"
+                alt="modelo TCP-IP.png"></figure>
+        <p>Profundicemos en cada una de ellas.</p>
+        <h2>¿Cuáles son las capas del modelo TCP/IP?</h2>
+        <p>El modelo TCP/IP tiene cuatro capas para comunicaciones en redes. Cada capa describe un conjunto de guías
+            generales.</p>
+        <h3>Capa 1: interfaz de red</h3>
+        <p>La primera capa es el nivel más bajo de comunicación que está conformado por pulsaciones eléctricas o
+            transporte físico. Este protocolo&nbsp;<em>no</em>&nbsp;se encarga de establecer la comunicación entre 2
+            puntos, únicamente de transmitir en el medio físico</p>
+        <p>Tiene protocolos como:</p>
+        <ol>
+            <li><strong>ARP:</strong> Address Resolution Protocol. Encuentra la MAC de las IP</li>
+            <li><strong>Ethernet:</strong> tecnología tradicional para conectar dispositivos en una red LAN.</li>
+            <li><strong>NDP:</strong> Neighbor Discovery Protocol. Resolución de direcciones y permite a un dispositivo
+                integrarse al ambiente local (una red física).</li>
+            <li><strong>L2TP:</strong> Layer 2 Tunneling Protocol. Corrige deficiencias de otros protocolos.</li>
+        </ol>
+        <h3>Capa 2: internet</h3>
+        <p>Se encarga de comunicar dos host para transmitir los datos, estable la ruta para que llegue la información al
+            punto deseado.</p>
+        <p>Tiene protocolos como:</p>
+        <ol>
+            <li><strong>IP:</strong> Internet Protocol. Para la identificación y comunicación.</li>
+            <li><strong>ICMP:</strong> Internet Control Message Protocol</li>
+            <li><strong>IPSEC:</strong> Internet Protocol security. Son varios protocolos que autentican al IP y cifran
+                los paquetes.</li>
+            <li><strong>IGMP:</strong> Internet Group Management Protocol. Multidifusión.</li>
+        </ol>
+        <h3>Capa 3: transporte</h3>
+        <p>Se encarga de transferir los archivos entre los dos host, para esto existen varios protocolos, por ejemplo,
+            el protocolo “TCP” que se encarga de transmitir los datos priorizando la fiabilidad de los mismos (que no se
+            pierda información en el camino)-</p>
+        <p>Por otro lado, el protocolo “UDP” que se encarga de la velocidad de transmisión de datos antes que la
+            fiabilidad del mismo (prefiere mandar los datos lo más rápido posible aunque pierda algo de información en
+            el camino).</p>
+        <p>Sus protocolos principales son: TCP y UDP</p>
+        <ul>
+            <li><strong>TCP:</strong> Transmission Control Protocol. Controla la transmisión de la información.</li>
+            <li><strong>DCCP:</strong> Datagram Congestion Control Protocol. Transporte de mensajes.</li>
+            <li><strong>MTP:</strong> Micro Transport Protocol. Conexiones peer to peer.</li>
+            <li><strong>UDP:</strong> User Datagram Protocol. Mínimo de transporte de mensajes.</li>
+            <li><strong>ICMP:</strong> Internet Control Message Protocol. mensajes de error e información operativa.
+            </li>
+            <li><strong>FCP:</strong> Fibre Channel protocol. Carga el S.O y la verificación.</li>
+        </ul>
+        <h3>Capa 4: aplicación</h3>
+        <p>Ofrece a las aplicaciones (de usuario o no) la posibilidad de acceder a los servicios de las demás capas y
+            define los protocolos que utilizan las aplicaciones para intercambiar datos, como correo electrónico (POP y
+            SMTP), gestores de bases de datos y protocolos de transferencia de archivos (FTP).</p>
+        <p>Tiene protocolos como:</p>
+        <ul>
+            <li><strong>FTP:</strong> File Transfer Protocol. Transferencia de archivos.</li>
+            <li><strong>SSH:</strong> Secure Shell. Es para las conexiones seguras.</li>
+            <li><strong>SMTP:</strong> Simple Mail Transfer Protocol. Asigna dinámicamente la IP y otros parámetros.
+            </li>
+            <li><strong>DHCP:</strong> Dinamic Host Configuration Protocol. Es una manera de establecer una conexión y
+                verificar que todo ocurrió correctamente.</li>
+            <li><strong>DNS:</strong> Domain Name System. Le asigna nombres a las IP de los dominios y se encarga de
+                traducirlos.</li>
+            <li><strong>RIP:</strong> Routing Information Protocol.</li>
+            <li><strong>SNMP:</strong> Simple Network Management Protocol.</li>
+            <li><strong>HTTP:</strong> Hypertext Transfer Protocol.</li>
+        </ul>
+        <h2>Diferencia entre TCP Y UDP</h2>
+        <p><strong><em>TCP:</em></strong></p>
+        <ul>
+            <li>Es confiable</li>
+            <li>Está orientado a la conexión</li>
+            <li>Se espera que siempre exista la conexión entre 2 computadoras</li>
+            <li>Importa la confiabilidad sobre la rapidez</li>
+        </ul>
+        <p>Un ejemplo claro es la transferencia de archivos.</p>
+        <p><strong><em>UDP:</em></strong></p>
+        <ul>
+            <li>No es confiable</li>
+            <li>No está orientado a la conexión</li>
+            <li>No se “preocupa” si llegaron o no los datos</li>
+        </ul>
+        <p>Un ejemplo para la diferencia entre TCP y UDP. TCP es por ejemplo un mail en el que necesitamos que llegue el
+            mensaje completo y por el contrario UDP cuando jugamos un juego en línea y necesitamos que la información
+            llegue lo más rápido posible y no nos importa si se pierde una parte de los datos.</p>
+        <p><em>Aporte basado en notas de: Brandon Verdeja, Maximiliano Ovando, Mauricio Osorio y Pablo23.</em></p>
+    </div>
+</body>
+
+</html>

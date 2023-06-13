@@ -19,13 +19,11 @@
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             grid-auto-rows: minmax(100px, auto);
-            border: 2px solid red;
         }
         .wrapper > div {
-            background: rgba(255, 127, 80, 05);
-            border: 2px solid  rgba(209, 109, 8, 1);
-            
-            color:#EAEAEA;
+            background: #EAEAEA;
+            max-height: 200px;
+            overflow: scroll;
         }
         .subwrapper {
             display: subgrid;
@@ -35,7 +33,7 @@
         }
 
         .cell-1 {
-            grid-column: 1;
+            grid-column: 1/4;
             grid-row: 1/3;
         }
         .cell-2 {
@@ -47,7 +45,6 @@
             grid-column: 3;
         }
         .subcell {
-            background: rgba(252, 219, 3, 0.3);
             margin: 8px;
             border-radius: 5px;
         }
@@ -65,52 +62,41 @@
 <body>
     <div>
         <div class="wrapper">
-            <div class="cell cell-1" id="cell">
-                <h1>Celda 1</h1>
-               <div class="subwrapper">
-                    <div class="subcell cell cell-1" id="id-sub-cell">
-                        <h3>Subcelda 1</h3>
-                    </div>
-                    <div class="subcell cell cell-1" id="id-sub-cell">
-                        <h3>Subcelda 2</h3>
-                    </div>
-                    <div class="subcell cell cell-1" id="id-sub-cell">
-                        <h3>Subcelda 2</h3>
-                    </div>
-                    <div class="subcell cell cell-1" id="id-sub-cell">
-                        <h3>Subcelda 2</h3>
-                    </div>
-                </div>
-            </div>
-            <div class="cell-2" id="cell-2">
-                <h1>Celda 2</h1>
-            </div>
-            <div class="cell cell-3" id="cell-3">
-                <h1>Celda 3</h1>
+            <div class="cell cell-1" id="cell-container">
+                <h1>Observando los cambios del html con MutationObserver</h1>
             </div>
         </div>
     </div>
     <script>
+        let blockExistsH5 = false
         window.onload = function(){
             let intervalId;
+            
             const observer = new MutationObserver((mutations) => {
-                const observaCelda2 = 'cell-2'
-                mutations.forEach(node => {
-                    console.log('node type', typeof node)
-                    console.log('node', node)
-                    if (node.target.id === observaCelda2) {
-                        console.log('Se encontró la clase que se buscaba')
-                        document.getElementById(observaCelda2).style.backgroundColor = 'red';
-                    }
-                })
-                console.log('Se registró un cambio en el div con clase wrapper', mutations)
+                /**
+                 * Esta función se ejecuta cada vez que el cuerpo del html a partír 
+                 * de la etiquetda <body> sufre un cambio. 
+                 * 
+                 * Para ver qué cambios observa la api de MutationObserver, buscar en la documentación
+                */
+                const elem = document.getElementById('id-h5-3') || null
+                if (elem !== null && !blockExistsH5) {
+                    alert('Se cachó la creación de la etiqueta h5 con el identificador #id-h5-3')
+                    vblockExistsH5 = true
+                    // clearInterval(intervalId)
+                }
             })
-            observer.observe(document.querySelector('body'), {
+            observer.observe(document.querySelector('#cell-container'), {
                 childList: true,
                 subtree: true,
                 attributes: true
             });
             let counter = 0
+            intervalId = setInterval(() => {
+                counter++
+                const elem = document.querySelector('#cell-container')
+                elem.innerHTML += '<h3>Elemento agregado ' + counter + '</h3> <h5 id="id-h5-'+ counter +'">Se mostrará una alerta cuando se cree el div con id-div-15</h5>';
+            }, 1000)
         }
     </script>
 </body>
