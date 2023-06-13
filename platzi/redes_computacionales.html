@@ -12,30 +12,41 @@
             text-align: justify;
             margin: 0 auto;
         }
+
         .Resources-description {
             width: 80%;
             min-width: 300px;
         }
+
         pre {
-            background: rgba(0,0,0,0.1);
+            background: rgba(0, 0, 0, 0.1);
             width: 100%;
             overflow-x: scroll;
             height: auto;
         }
+
         figure {
             margin: 0;
             padding: 10px;
         }
-        
+
+        .img-container {
+            max-width: 1366px;
+            overflow-x: scroll;
+            background-color: #e6e6e6;
+        }
+
         @media(max-width: 520px) {
             .Resources-description {
                 width: 100%;
             }
+
             .img-container {
                 width: 100%;
                 overflow-x: scroll;
-                background-color:#e6e6e6;
+                background-color: #e6e6e6;
             }
+
             img {
                 max-height: 400px;
             }
@@ -69,8 +80,8 @@
         </ul>
         <div class="img-container">
             <figure><img
-                src="https://static.platzi.com/media/user_upload/Captura%20de%20Pantalla%202022-01-26%20a%20la%28s%29%205.30.22%20p.m.-8d0a2556-7853-45b8-b910-7cc4aa4ab30f.jpg"
-                alt="modelo TCP-IP.png"></figure>
+                    src="https://static.platzi.com/media/user_upload/Captura%20de%20Pantalla%202022-01-26%20a%20la%28s%29%205.30.22%20p.m.-8d0a2556-7853-45b8-b910-7cc4aa4ab30f.jpg"
+                    alt="modelo TCP-IP.png"></figure>
         </div>
         <p>Profundicemos en cada una de ellas.</p>
         <h2>¿Cuáles son las capas del modelo TCP/IP?</h2>
@@ -157,50 +168,57 @@
     <!-- TERMINA Modelo TCP / IP -->
     <hr />
     <!-- INICIA Identificando las redes: IP y su estructura -->
-    <h1>Cap&iacute;tulo 9: Identificando las redes: IP y su estructura</h1>
-    <p>Enlace: <a
-            href="https://platzi.com/clases/2225-redes/35584-modelo-tcpip/">https://platzi.com/clases/2225-redes/35584-modelo-tcpip/</a>
-    </p>
     <div class=" root-container Resources-description">
-        <p>IP significa Internet Protocol. Es la manera en la que las computadoras se identifican en internet.</p>
-        <h2>¿Qué es protocolo IP?</h2>
-        <p>El protocolo IP se encarga principalmente del ruteo. Es la manera en la que se va a transmitir la información
-            o los caminos que van a tomar.</p>
-        <ul>
-            <li>Este protocolo tiene ciertos rangos para asignar las IP</li>
-            <li>Dentro de tu red también puedes establecer una mascara de sub-red, que es una manera de establecer
-                límites entre los hosts que se pueden tomar.</li>
-        </ul>
-        <h2>Estructura de una dirección IP</h2>
-        <p>Una IP(IPv4) está compuesta de 4 octetos. Los primeros 3 octetos de una IP(IPv4) representan la dirección de
-            red.</p>
-        <p>La siguiente es una descripción gráfica de los componentes de <a
-                href="https://platzi.com/clases/1098-ingenieria/6559-que-es-una-direccion-ip-y-el-protocolo-de-internet/"
-                target="_blank" rel=" noopener">una dirección IP</a>:</p>
-        <div class="img-container">
-            <figure><img
-                src="https://static.platzi.com/media/user_upload/Captura%20de%20Pantalla%202022-01-26%20a%20la%28s%29%206.04.50%20p.m.-195ccb34-6e35-4a07-8827-31836f7cc2d5.jpg"
-                alt="estructura IP.png"></figure>
-        </div>
-        <h2>Ejemplo de una dirección IP</h2>
-        <p>Las IP en la versión IPv4 están conformadas por 4 secciones de 1 byte.</p>
-        <p>Cada byte está compuesto por 8 bits.</p>
-        <p>El valor de cada sección está relacionado a los bits positivos o verdaderos.</p>
-        <p>Ej. 10100100 = 1 + 0 + 1 + 0 + 0 + 1 + 0 + 0</p>
-        <p>Se suma las posiciones contando de derecha a izquerda.donde la posición más a la derecha, representa el
-            exponencial 0 del número 2. Y el número más a la izquierda será el exponencial 7</p>
-        <p>Num. Binario 1 0 1 0 0 1 0 0</p>
-        <p>Posición: 8 7 6 5 4 3 2 1</p>
-        <p>Indice o Exp: 7 6 5 4 3 2 1 0</p>
-        <p>Calcular los que tengan 1: + - + - - + - -</p>
-        <p>Se toma el 2 porque hablamos del sistema de numeración binaria. Sólo contiene 2 dígitos, los cuales son 0,1
+        <h1>Cap&iacute;tulo 9: Identificando las redes: IP y su estructura</h1>
+        <p>Enlace: <a
+                href="https://platzi.com/clases/2225-redes/35584-modelo-tcpip/">https://platzi.com/clases/2225-redes/35584-modelo-tcpip/</a>
         </p>
-        <p>Entonces para el ejemplo anterior tenemos: Ej. 10100100 = 1 + 0 + 1 + 0 + 0 + 1 + 0 + 0</p>
-        <p>Leyendo desde la derecha tomamos en cuenta los valores 1:Posición 3, índice 2, Valor= 4 (2 elevado a la 2 ,
-            2^2 )Posición 6, índice 5, Valor= 32 (2 elevado a la 5, 2^5)Posición 8, índice 7, Valor= 128 (2 elevado a la
-            7, 2^7)</p>
-        <p>Valor en sistema decimal de 10100100 = 164</p>
-        <p><em>Aporte basado en notas de: Tania Fernandez, Cesar Victoria, SEBASSD</em></p>
+        <div class=" root-container Resources-description">
+            <p>IP significa Internet Protocol. Es la manera en la que las computadoras se identifican en internet.</p>
+            <h2>¿Qué es protocolo IP?</h2>
+            <p>El protocolo IP se encarga principalmente del ruteo. Es la manera en la que se va a transmitir la
+                información
+                o los caminos que van a tomar.</p>
+            <ul>
+                <li>Este protocolo tiene ciertos rangos para asignar las IP</li>
+                <li>Dentro de tu red también puedes establecer una mascara de sub-red, que es una manera de establecer
+                    límites entre los hosts que se pueden tomar.</li>
+            </ul>
+            <h2>Estructura de una dirección IP</h2>
+            <p>Una IP(IPv4) está compuesta de 4 octetos. Los primeros 3 octetos de una IP(IPv4) representan la dirección
+                de
+                red.</p>
+            <p>La siguiente es una descripción gráfica de los componentes de <a
+                    href="https://platzi.com/clases/1098-ingenieria/6559-que-es-una-direccion-ip-y-el-protocolo-de-internet/"
+                    target="_blank" rel=" noopener">una dirección IP</a>:</p>
+            <div class="img-container">
+                <figure><img
+                        src="https://static.platzi.com/media/user_upload/Captura%20de%20Pantalla%202022-01-26%20a%20la%28s%29%206.04.50%20p.m.-195ccb34-6e35-4a07-8827-31836f7cc2d5.jpg"
+                        alt="estructura IP.png"></figure>
+            </div>
+            <h2>Ejemplo de una dirección IP</h2>
+            <p>Las IP en la versión IPv4 están conformadas por 4 secciones de 1 byte.</p>
+            <p>Cada byte está compuesto por 8 bits.</p>
+            <p>El valor de cada sección está relacionado a los bits positivos o verdaderos.</p>
+            <p>Ej. 10100100 = 1 + 0 + 1 + 0 + 0 + 1 + 0 + 0</p>
+            <p>Se suma las posiciones contando de derecha a izquerda.donde la posición más a la derecha, representa el
+                exponencial 0 del número 2. Y el número más a la izquierda será el exponencial 7</p>
+            <p>Num. Binario 1 0 1 0 0 1 0 0</p>
+            <p>Posición: 8 7 6 5 4 3 2 1</p>
+            <p>Indice o Exp: 7 6 5 4 3 2 1 0</p>
+            <p>Calcular los que tengan 1: + - + - - + - -</p>
+            <p>Se toma el 2 porque hablamos del sistema de numeración binaria. Sólo contiene 2 dígitos, los cuales son
+                0,1
+            </p>
+            <p>Entonces para el ejemplo anterior tenemos: Ej. 10100100 = 1 + 0 + 1 + 0 + 0 + 1 + 0 + 0</p>
+            <p>Leyendo desde la derecha tomamos en cuenta los valores 1:Posición 3, índice 2, Valor= 4 (2 elevado a la 2
+                ,
+                2^2 )Posición 6, índice 5, Valor= 32 (2 elevado a la 5, 2^5)Posición 8, índice 7, Valor= 128 (2 elevado
+                a la
+                7, 2^7)</p>
+            <p>Valor en sistema decimal de 10100100 = 164</p>
+            <p><em>Aporte basado en notas de: Tania Fernandez, Cesar Victoria, SEBASSD</em></p>
+        </div>
     </div>
     <!-- TERMINA Identificando las redes: IP y su estructura -->
     <!-- INICIA -->
@@ -228,8 +246,8 @@
         <h2>Tabla de las clases para asignación de dirección IP</h2>
         <div class="img-container">
             <figure><img
-                src="https://static.platzi.com/media/user_upload/Captura%20de%20Pantalla%202022-01-26%20a%20la%28s%29%207.06.56%20p.m.-207132c7-4201-4ed4-a6b7-8344a3f91d2f.jpg"
-                alt="clases y direcciones IP.png"></figure>
+                    src="https://static.platzi.com/media/user_upload/Captura%20de%20Pantalla%202022-01-26%20a%20la%28s%29%207.06.56%20p.m.-207132c7-4201-4ed4-a6b7-8344a3f91d2f.jpg"
+                    alt="clases y direcciones IP.png"></figure>
         </div>
         <h2>¿<strong>Cómo funcionan las direcciones IP y las máscaras subred?</strong></h2>
         <hr>
