@@ -8,17 +8,44 @@
     <title>Document</title>
     <link rel="stylesheet" href="../styles.css" />
     <style>
-        .Resources-description {
-            width: 80%;
+        .root-container {
             text-align: justify;
             margin: 0 auto;
+        }
+        .Resources-description {
+            width: 80%;
+            min-width: 300px;
+        }
+        pre {
+            background: rgba(0,0,0,0.1);
+            width: 100%;
+            overflow-x: scroll;
+            height: auto;
+        }
+        figure {
+            margin: 0;
+            padding: 10px;
+        }
+        
+        @media(max-width: 520px) {
+            .Resources-description {
+                width: 100%;
+            }
+            .img-container {
+                width: 100%;
+                overflow-x: scroll;
+                background-color:#e6e6e6;
+            }
+            img {
+                max-height: 400px;
+            }
         }
     </style>
 </head>
 
 <body>
     <!-- INICIA Modelo TCP / IP -->
-    <div class="Resources-description">
+    <div class=" root-container Resources-description">
         <h1>Cap&iacute;tulo 8: Model TCP/IP</h1>
         <p>Enlace: <a
                 href="https://platzi.com/clases/2225-redes/35584-modelo-tcpip/">https://platzi.com/clases/2225-redes/35584-modelo-tcpip/</a>
@@ -40,9 +67,11 @@
             <li>Capa 3 (Transporte)</li>
             <li>Capa 4 (Aplicación)</li>
         </ul>
-        <figure><img
+        <div class="img-container">
+            <figure><img
                 src="https://static.platzi.com/media/user_upload/Captura%20de%20Pantalla%202022-01-26%20a%20la%28s%29%205.30.22%20p.m.-8d0a2556-7853-45b8-b910-7cc4aa4ab30f.jpg"
                 alt="modelo TCP-IP.png"></figure>
+        </div>
         <p>Profundicemos en cada una de ellas.</p>
         <h2>¿Cuáles son las capas del modelo TCP/IP?</h2>
         <p>El modelo TCP/IP tiene cuatro capas para comunicaciones en redes. Cada capa describe un conjunto de guías
@@ -129,8 +158,10 @@
     <hr />
     <!-- INICIA Identificando las redes: IP y su estructura -->
     <h1>Cap&iacute;tulo 9: Identificando las redes: IP y su estructura</h1>
-    <p>Enlace: <a href="https://platzi.com/clases/2225-redes/35584-modelo-tcpip/">https://platzi.com/clases/2225-redes/35584-modelo-tcpip/</a></p>
-    <div class="Resources-description">
+    <p>Enlace: <a
+            href="https://platzi.com/clases/2225-redes/35584-modelo-tcpip/">https://platzi.com/clases/2225-redes/35584-modelo-tcpip/</a>
+    </p>
+    <div class=" root-container Resources-description">
         <p>IP significa Internet Protocol. Es la manera en la que las computadoras se identifican en internet.</p>
         <h2>¿Qué es protocolo IP?</h2>
         <p>El protocolo IP se encarga principalmente del ruteo. Es la manera en la que se va a transmitir la información
@@ -146,9 +177,11 @@
         <p>La siguiente es una descripción gráfica de los componentes de <a
                 href="https://platzi.com/clases/1098-ingenieria/6559-que-es-una-direccion-ip-y-el-protocolo-de-internet/"
                 target="_blank" rel=" noopener">una dirección IP</a>:</p>
-        <figure><img
+        <div class="img-container">
+            <figure><img
                 src="https://static.platzi.com/media/user_upload/Captura%20de%20Pantalla%202022-01-26%20a%20la%28s%29%206.04.50%20p.m.-195ccb34-6e35-4a07-8827-31836f7cc2d5.jpg"
                 alt="estructura IP.png"></figure>
+        </div>
         <h2>Ejemplo de una dirección IP</h2>
         <p>Las IP en la versión IPv4 están conformadas por 4 secciones de 1 byte.</p>
         <p>Cada byte está compuesto por 8 bits.</p>
@@ -170,6 +203,111 @@
         <p><em>Aporte basado en notas de: Tania Fernandez, Cesar Victoria, SEBASSD</em></p>
     </div>
     <!-- TERMINA Identificando las redes: IP y su estructura -->
+    <!-- INICIA -->
+    <div class=" root-container Resources-description">
+        <p>Recuerda que tú no puedes utilizar las IPs que tú quieras, por ello existe un instituto llamado <a
+                href="https://www.icann.org/es" target="_blank" rel=" noopener">ICANN</a>&nbsp;&nbsp;que regula el uso
+            de las IPs a nivel mundial.</p>
+        <h2>¿Cómo se asignan las <a href="https://platzi.com/clases/2225-redes/35585-identificando-las-redes/"
+                target="_blank" rel=" noopener">direcciones IP</a>?</h2>
+        <p>Existen dos organizaciones para asignar direcciones IP:</p>
+        <p>El <strong>ICANN</strong>&nbsp;(Corporación para la Asignación de Nombres y Números en Internet) es organismo
+            que regula el uso de las direcciones IP a nivel mundial.</p>
+        <p>La <strong>IANA</strong>&nbsp;(Internet Assigned Numbers Authority) se encarga de la asignación de las
+            direcciones IP.</p>
+        <h2>¿Qué rangos de asignación existen?</h2>
+        <p>Existen diferentes clases para las direcciones IP.</p>
+        <ul>
+            <li>Clase A (redes grandes)</li>
+            <li>Clase B (redes medianas)</li>
+            <li>Clase C (redes pequeñas)</li>
+            <li>Clase D (multicast)</li>
+            <li>Clase E (investigación)</li>
+        </ul>
+        <p>Según el uso que se le vaya a dar es el lugar donde entraría o la clase donde entraría esa IP.</p>
+        <h2>Tabla de las clases para asignación de dirección IP</h2>
+        <div class="img-container">
+            <figure><img
+                src="https://static.platzi.com/media/user_upload/Captura%20de%20Pantalla%202022-01-26%20a%20la%28s%29%207.06.56%20p.m.-207132c7-4201-4ed4-a6b7-8344a3f91d2f.jpg"
+                alt="clases y direcciones IP.png"></figure>
+        </div>
+        <h2>¿<strong>Cómo funcionan las direcciones IP y las máscaras subred?</strong></h2>
+        <hr>
+        <p>Las direcciones IP nos permiten identificar&nbsp;<strong>hosts</strong>&nbsp;o dispositivos conectados a
+            internet.He aquí una dirección IPv4 de ejemplo:</p>
+        <pre><code>192<span class="hljs-selector-class">.168</span><span class="hljs-selector-class">.22</span><span class="hljs-selector-class">.87</span>
+        
+        </code></pre>
+        <p>También tenemos&nbsp;<strong>máscaras de subred</strong>&nbsp;las cuáles sirven para conocer
+            nuestra&nbsp;<strong>dirección de red</strong>&nbsp;y las direcciones IP disponibles en esa red (puesto que
+            son limitadas).He aquí una máscara de subred típica para redes&nbsp;<strong>LAN</strong>&nbsp;(usualmente
+            redes de hogar):</p>
+        <pre><code>255<span class="hljs-selector-class">.255</span><span class="hljs-selector-class">.255</span><span class="hljs-selector-class">.0</span>
+        
+        </code></pre>
+        <p>Puedes conocer tu dirección IP y máscara de subred con los siguientes comandos:</p>
+        <p><strong>WIndows</strong></p>
+        <pre><code><span class="hljs-built_in">ipconfig</span>
+        
+        </code></pre>
+        <p><strong>MacOS/Linux</strong></p>
+        <pre><code><span class="hljs-attribute">ifconfig</span>
+        
+        </code></pre>
+        <h3><strong>La máscara de subred</strong></h3>
+        <p>La máscara de subred al igual que una dirección IPv4 tiene
+            4&nbsp;<strong>octetos</strong>&nbsp;o&nbsp;<strong>bytes</strong>&nbsp;y dependiendo de la clase de la red
+            pueden ser de la siguiente manera:</p>
+        <pre><code>255<span class="hljs-selector-class">.255</span><span class="hljs-selector-class">.0</span><span class="hljs-selector-class">.0</span>
+        255<span class="hljs-selector-class">.255</span><span class="hljs-selector-class">.255</span><span class="hljs-selector-class">.252</span>
+        255<span class="hljs-selector-class">.255</span><span class="hljs-selector-class">.224</span><span class="hljs-selector-class">.0</span>
+        ...
+        
+        </code></pre>
+        <p>El ejemplo más común para redes&nbsp;<strong>LAN</strong>&nbsp;es
+            la&nbsp;<strong><em>255.255.255.0</em></strong>&nbsp;y se puede obtener la dirección de red (esta es
+            otorgada por el ISP o Internet Service Provider cuando contratas el servicio de internet) de la siguiente
+            manera:</p>
+        <ol>
+            <li>Se convierten en binario cada octeto de la dirección IP y las máscara de subred:</li>
+        </ol>
+        <pre><code>11000000<span class="hljs-selector-class">.10101000</span><span class="hljs-selector-class">.00010110</span><span class="hljs-selector-class">.01010111</span> <span class="hljs-selector-tag">--</span>&gt; 192<span class="hljs-selector-class">.168</span><span class="hljs-selector-class">.22</span><span class="hljs-selector-class">.87</span>
+        11111111<span class="hljs-selector-class">.11111111</span><span class="hljs-selector-class">.11111111</span><span class="hljs-selector-class">.00000000</span> <span class="hljs-selector-tag">--</span>&gt; 255<span class="hljs-selector-class">.255</span><span class="hljs-selector-class">.255</span><span class="hljs-selector-class">.0</span>
+        
+        </code></pre>
+        <ol>
+            <li>Se compara cada bit con su bit correspondiente de tal manera que&nbsp;<strong><em>1 y 1 =
+                        1</em></strong>&nbsp;y&nbsp;<strong><em>1 y 0 = 0</em></strong></li>
+        </ol>
+        <pre><code>11000000<span class="hljs-selector-class">.10101000</span><span class="hljs-selector-class">.00010110</span><span class="hljs-selector-class">.01010111</span> <span class="hljs-selector-tag">--</span>&gt; 192<span class="hljs-selector-class">.168</span><span class="hljs-selector-class">.22</span><span class="hljs-selector-class">.87</span>
+        11111111<span class="hljs-selector-class">.11111111</span><span class="hljs-selector-class">.11111111</span><span class="hljs-selector-class">.00000000</span> <span class="hljs-selector-tag">--</span>&gt; 255<span class="hljs-selector-class">.255</span><span class="hljs-selector-class">.255</span><span class="hljs-selector-class">.0</span>
+        <span class="hljs-selector-tag">-------------------------------------------------------------</span>
+        11000000<span class="hljs-selector-class">.10101000</span><span class="hljs-selector-class">.00010110</span><span class="hljs-selector-class">.00000000</span> <span class="hljs-selector-tag">--</span>&gt; 192<span class="hljs-selector-class">.168</span><span class="hljs-selector-class">.22</span><span class="hljs-selector-class">.0</span>
+        
+        </code></pre>
+        <p>Como verás, los primeros 3 octetos de la dirección de red son iguales a los 3 primeros de la dirección IP.
+            Esto es porque la dirección IP representa 2 cosas:</p>
+        <ol>
+            <li>La dirección de red</li>
+            <li>La dirección del dispositivo conectado dentro de esa red</li>
+        </ol>
+        <pre><code>192<span class="hljs-selector-class">.168</span><span class="hljs-selector-class">.22</span> <span class="hljs-selector-tag">--</span>&gt; <span class="hljs-selector-tag">direcci</span>ó<span class="hljs-selector-tag">n</span> <span class="hljs-selector-tag">de</span> <span class="hljs-selector-tag">red</span>
+        <span class="hljs-selector-class">.87</span> <span class="hljs-selector-tag">--</span>&gt; <span class="hljs-selector-tag">direcci</span>ó<span class="hljs-selector-tag">n</span> <span class="hljs-selector-tag">del</span> <span class="hljs-selector-tag">dispositivo</span>
+        
+        </code></pre>
+        <p>Algo así como el nombre de la calle y el número de la casa. En este caso es por eso que la máscara de subred
+            tiene llenos los primeros 3 octetos&nbsp;<strong>(255.255.255)</strong>&nbsp;puesto que la dirección de red
+            no cambia y el último vacio&nbsp;<strong>(.0)</strong>&nbsp;porque esa si cambia de esta manera nos dice que
+            hay disponibles&nbsp;<strong>256</strong>&nbsp;direcciones de dispositivos dentro de esa red.</p>
+        <p>Pero no se pueden usar todas, hay&nbsp;<strong>2</strong>&nbsp;que ya estan reservadas.
+            La&nbsp;<strong>192.168.22.0</strong>&nbsp;puesto que esa ya es la dirección de redy
+            la&nbsp;<strong>192.168.22.255</strong>&nbsp;puesto que esa es la&nbsp;<strong>dirección de
+                broadcast.</strong></p>
+        <p>Esto nos deja con un rango de&nbsp;<strong>254</strong>&nbsp;direcciones disponibles:<strong><em>192.168.22.1
+                    - 192.168.22.254</em></strong></p>
+        <p><em>Aporte basado en notas de: Andrea Davila , Walter Santiago, Josue Granados.</em></p>
+    </div>
+    <!-- TERMINA -->
 </body>
 
 </html>
