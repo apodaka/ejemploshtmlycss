@@ -86,10 +86,10 @@
                 de mensajes.</p>
             <div class="img-container">
                 <figure><img
-                    src="https://static.platzi.com/media/user_upload/Captura%20de%20pantalla%20%28239%29-3f7c584e-e233-4f58-92c0-186c61a251c3.jpg"
-                    alt="telegrafo.jpg"></figure>
+                        src="https://static.platzi.com/media/user_upload/Captura%20de%20pantalla%20%28239%29-3f7c584e-e233-4f58-92c0-186c61a251c3.jpg"
+                        alt="telegrafo.jpg"></figure>
             </div>
-            
+
             <h2>Teléfono</h2>
             <p>Se logra transmitir voz de un punto a otro. Al inicio pocos tenían acceso a esta tecnología pero poco a
                 poco se volvió accesible. Estos son los diferentes tipos de teléfonos:</p>
@@ -102,10 +102,10 @@
                 pronto 5G.</p>
             <div class="img-container">
                 <figure><img
-                    src="https://static.platzi.com/media/user_upload/Captura%20de%20pantalla%20%28241%29-648829c1-069e-4b76-b747-db3267e6eba9.jpg"
-                    alt="telefono y tipos de telefono.jpg"></figure>
+                        src="https://static.platzi.com/media/user_upload/Captura%20de%20pantalla%20%28241%29-648829c1-069e-4b76-b747-db3267e6eba9.jpg"
+                        alt="telefono y tipos de telefono.jpg"></figure>
             </div>
-            
+
             <h2>Radio</h2>
             <p>Utiliza señales de radio para transmitir, desde un nodo central a varios nodos receptores. A medida que
                 nos alejamos se pierde la comunicación, ya que existe un limitante.</p>
@@ -478,9 +478,7 @@
     <!-- INICIA Modelo TCP / IP -->
     <div class=" root-container Resources-description">
         <h1>Cap&iacute;tulo 8: Model TCP/IP</h1>
-        <p>Enlace: <a
-                href="https://platzi.com/clases/2225-redes/35584-modelo-tcpip/">https://platzi.com/clases/2225-redes/35584-modelo-tcpip/</a>
-        </p>
+
         <p>El <strong>modelo TCP</strong> (Protocolo de control de transmisión) es un conjunto de directrices que
             establecen las formas de los mensajes y los pasos necesarios para que los dispositivos y los programas se
             comuniquen entre sí. Estos se deben cumplir para asegurar una correcta interpretación del mensaje recibido
@@ -590,9 +588,7 @@
     <!-- INICIA Identificando las redes: IP y su estructura -->
     <div class=" root-container Resources-description">
         <h1>Cap&iacute;tulo 9: Identificando las redes: IP y su estructura</h1>
-        <p>Enlace: <a
-                href="https://platzi.com/clases/2225-redes/35584-modelo-tcpip/">https://platzi.com/clases/2225-redes/35584-modelo-tcpip/</a>
-        </p>
+
         <div class=" root-container Resources-description">
             <p>IP significa Internet Protocol. Es la manera en la que las computadoras se identifican en internet.</p>
             <h2>¿Qué es protocolo IP?</h2>
@@ -645,7 +641,7 @@
     <!-- INICIA Clases de redes: asignación direcciones IP -->
     <div class="root-container Resources-description">
         <h1>Capítulo 10: Clases de redes: asignación direcciones IP</h1>
-        <p>Enlace: pendinete</p>
+
         <p>Recuerda que tú no puedes utilizar las IPs que tú quieras, por ello existe un instituto llamado <a
                 href="https://www.icann.org/es" target="_blank" rel=" noopener">ICANN</a>&nbsp;&nbsp;que regula el uso
             de las IPs a nivel mundial.</p>
@@ -749,6 +745,552 @@
         <p><em>Aporte basado en notas de: Andrea Davila , Walter Santiago, Josue Granados.</em></p>
     </div>
     <!-- TERMINA Clases de redes: asignación direcciones IP -->
+    <!--- INICIA Qué es el Modelo OSI --->
+    <div class="root-container Resources-description">
+        <h1>Capítulo 13: Qué es el Modelo OSI</h1>
+        <div class="Resources-description">
+            <p>El <strong>modelo OSI</strong> es un marco utilizado para comprender cómo funcionan juntos los diferentes
+                sistemas de comunicación. Divide el proceso de envío y recepción de datos a través de una red en siete
+                capas, cada una de las cuales realiza una función específica.</p>
+            <p>Fue desarrollado por la <strong>Organización Internacional para la Estandarización</strong> (ISO), a
+                fines de la década de <strong>1970 y principios de la de 1980</strong>, como una manera de estandarizar
+                el trabajo de distintos sistemas de comunicación y proporcionar una estructura lógica y organizada para
+                el intercambio de datos.</p>
+            <h2>¿Cómo funciona el modelo OSI?</h2>
+            <p>El modelo cuenta con 7 capas que enumeraremos de abajo hacia arriba.</p>
+            <figure><img
+                    src="https://static.platzi.com/media/user_upload/Captura%20de%20Pantalla%202022-01-26%20a%20la%28s%29%207.18.25%20p.m.-c9668c1c-6cea-4114-a78f-a37d97f00bea.jpg"
+                    alt="modelo OSI.png"></figure>
+            <h2>¿Cuáles son las capas del modelo OSI?</h2>
+            <p>Este estándar de redes para computadoras se maneja por capas porque cada una involucra una tarea
+                específica y se comunica con la capa inmediatamente inferior o superior para ejecutar su función y por
+                eso a continuación te explicaremos cada una de ellas.</p>
+            <h3>1. Capa física</h3>
+            <p>La <a href="https://platzi.com/clases/2225-redes/35588-capa-fisica/" target="_blank" rel=" noopener">capa
+                    física</a> se ocupa de la conexión física entre dispositivos, como la transmisión de datos a través
+                de un cable de cobre o fibra óptica (electricidad, cables, hardware). Algunas de las funciones que tiene
+                la capa física son:</p>
+            <ul>
+                <li>Establecer y mantener la conexión física entre dispositivos</li>
+                <li>Especificar el tipo de medio de transmisión</li>
+                <li>Controlar el flujo de datos</li>
+                <li>Detectar y corregir errores</li>
+                <li>Convertir datos en señales físicas</li>
+            </ul>
+            <h3>2. Capa de enlace de datos</h3>
+            <p>Esta <a href="ttps://platzi.com/clases/2225-redes/35590-capa-de-enlace-de-datos/" target="_blank"
+                    rel=" noopener">capa de enlace de datos</a> es responsable de establecer y mantener un enlace entre
+                dispositivos, asegurando que los datos se transmitan de manera precisa y eficiente. También realiza la
+                verificación y corrección de errores para garantizar que los datos se reciban correctamente.</p>
+            <p>En esta capa:</p>
+            <ul>
+                <li>Se envían los datos que se convirtieron a bits</li>
+                <li>Se le añade información sobre el direccionamiento físico</li>
+                <li>Se llega a la capa de red</li>
+            </ul>
+            <h3>3. Capa de red</h3>
+            <p>De otro modo, la <a href="https://platzi.com/clases/2225-redes/35591-capa-de-red/" target="_blank"
+                    rel=" noopener">capa de red</a> se encarga de enrutar datos entre dispositivos en una red, también
+                determina la ruta más eficiente para que viajen los datos y garantiza que lleguen a su destino. Algunas
+                de las funciones de la capa de red son:</p>
+            <ul>
+                <li>Enrutamiento de datos</li>
+                <li>Direccionamiento de dispositivos</li>
+                <li>Fragmentación y reensamblaje de paquetes</li>
+                <li>Control de congestión</li>
+            </ul>
+            <h3>4. Capa de transporte</h3>
+            <p>Esta <a href="https://platzi.com/clases/2225-redes/35592-capa-de-transporte/" target="_blank"
+                    rel=" noopener">capa de transporte</a> tiene el objetivo de garantizar que los datos se entreguen de
+                manera confiable y en el orden correcto. Agrega control de flujo y comprobación de errores para
+                garantizar que los datos no se pierdan ni se corrompan durante la transmisión. Se encuentran protocolos
+                como TCP.</p>
+            <ul>
+                <li>Control de flujo</li>
+                <li>Control de errores</li>
+                <li>División y reensamblaje de paquetes (datos más pequeños)</li>
+            </ul>
+            <h3>5. Capa de sesión</h3>
+            <p>En cambio, la <a href="https://platzi.com/clases/2225-redes/35593-capa-de-sesion/" target="_blank"
+                    rel=" noopener">capa de sesión</a> tiene como fin establecer, mantener y terminar las conexiones
+                entre dispositivos. Permite que los dispositivos se comuniquen entre sí y coordinen sus actividades.
+                Entre sus funciones está:</p>
+            <ul>
+                <li>Establecer conexiones</li>
+                <li>Mantener esos enlaces</li>
+                <li>Dar fin a esas conexiones</li>
+            </ul>
+            <h3>6. Capa de presentación</h3>
+            <p>Esta <a href="https://platzi.com/clases/2225-redes/35594-capa-de-presentacion/" target="_blank"
+                    rel=" noopener">capa de presentación</a> es responsable de convertir los datos a un formato que
+                pueda ser entendido por el dispositivo receptor. También maneja el cifrado y la compresión de datos para
+                garantizar que se transmitan de manera segura y eficiente. Formatea los datos para transferirlos a la
+                siguiente capa.</p>
+            <p>Entre las funciones de la capa de presentación está:</p>
+            <ul>
+                <li>Codificación y decodificación de datos</li>
+                <li>Compresión y descompresión de datos</li>
+            </ul>
+            <h3>7. Capa de aplicación</h3>
+            <p>Esta <a href="https://platzi.com/clases/2225-redes/35595-capa-de-aplicacion/" target="_blank"
+                    rel=" noopener">capa de aplicación</a> es el nivel más alto del modelo OSI y es responsable de
+                brindar servicios al usuario. Permite a los usuarios interactuar con la red y acceder a los recursos que
+                necesitan.</p>
+            <h2>Diferencia entre modelo OSI y modelo TCP/IP</h2>
+            <p>La diferencia con <a href="https://platzi.com/clases/2225-redes/35584-modelo-tcpip/" target="_blank"
+                    rel=" noopener">el modelo TCP/IP</a> es que sí se puede implementar, ya que especifica
+                detalladamente qué tipos de modulaciones, protocolos, cables, etc. son necesarios para que pueda existir
+                una conexión de redes.</p>
+            <p>Algo importante que se debe aclarar es que&nbsp;<strong>el modelo OSI es un modelo de
+                    referencia</strong>, es decir, que no es un modelo que se pueda implementar, sino que más bien es
+                una interpretación de lo que debe tener un modelo para mantener una comunicación efectiva. En la
+                siguiente clase verás los protocolos de cada una de las capas.</p>
+            <blockquote>
+                <p>Descubre más acerca de la <a href="https://platzi.com/clases/2225-redes/36043-direccionamiento-mac/"
+                        target="_blank" rel=" noopener">dirección MAC</a></p>
+            </blockquote>
+            <p><em>Contribución creada con los aportes de: Mauricio Osorio y Brayan Lechon.</em></p>
+        </div>
+    </div>
+    <!--- TERMINA Qué es el Modelo OSI --->
+    <hr />
+    <!--- INICIA Capa Física --->
+    <div class="root-container Resources-description">
+        <h1>Capítulo 13: Capa Física</h1>
+        <div class="Resources-description">
+            <p>En esta capa se encuentra todo lo físico, el hardware (componentes eléctricos, electrónicos,
+                electromecánicos y mecánicos) cables, electricidad, etc.</p>
+            <h2>¿Qué es la capa física <a href="https://platzi.com/clases/2225-redes/35587-modelo-osi/" target="_blank"
+                    rel=" noopener">del modelo OSI</a>?</h2>
+            <p>En la capa física se refiere a las transformaciones que se le hacen a la secuencia de bits para
+                transmitirlos de un lugar a otro.</p>
+            <p>Nos preocupamos por los medios de comunicación, señal y transmisión binaria.</p>
+            <h2>¿Qué elementos forman parte de la capa física?</h2>
+            <p>Hay diferentes protocolos que forman a la capa física. A continuación verás los 7 que lo componen:</p>
+            <h3>RS-232 (Recommended Standard 232)</h3>
+            <p>Interfaz que designa una norma para el intercambio de datos binarios.</p>
+            <h3><strong>RJ45</strong></h3>
+            <p>Interfaz física utilizada para conectar redes de computadoras con cableado estructurado. El típico cable
+                que si llevaste redes tuviste que acomodar con los cablecitos y ponchar 🙃</p>
+            <p>Y una imagen de las formas de acomodar los cables: <strong>Straight</strong> (Recto) y
+                <strong>Crossover</strong> (Cruzado).
+            </p>
+            <figure><img
+                    src="https://static.platzi.com/media/user_upload/Untitled-1d7561f5-fa09-418c-8c2e-187338dffd8f.jpg"
+                    alt="RJ45-modelo-osi-capa-fisica.png"></figure>
+            <h3><strong>V.34</strong></h3>
+            <p>Protocolo de conexión de módem, que permite velocidades de hasta 32.8125 Kibibits/s.</p>
+            <h3><strong>100Base-TX</strong></h3>
+            <p>Es la forma predominante de Fast Ethernet a 100 Mebibits/s.</p>
+            <h3><strong>SDH (Synchronous Digital Hierarchy)</strong></h3>
+            <p>Varios protocolos de transmisión de datos.</p>
+            <h3><strong>DSL (Digital Subscriber Line - Línea de Suscriptor Digital)</strong></h3>
+            <p>Es tecnología de banda ancha que proporciona transmisión de información a alta velocidad (hasta 7.1
+                Mebibits/s) a través de una línea telefónica existente. Las velocidades son hasta 50 veces más rápidas
+                que las de un módem por dial-up estándar de 28.8 Kibibits/s.</p>
+            <h3><strong>802.11</strong></h3>
+            <p>Es una familia de normas inalámbricas creada por el Instituto de IEEE (Ingenieros Eléctricos y
+                Electrónicos) 802.11n es la forma más apropiada de llamar Wi-Fi (Wireless Fidelity).</p>
+            <p><em>Aporte creado por Brandon Verdeja.</em></p>
+        </div>
+    </div>
+    <!--- TERMINA Capa Física --->
+    <hr />
+    <!--- INICIA El cable de par trenzado --->
+    <div class="root-container Resources-description">
+        <h1>Capítulo 17: El cable de par trenzado</h1>
+        <div class="MaterialLecture">
+            <div class="MaterialLecture-text">
+                <p>Los <strong>cables de par trenzado</strong> son el alma de la comunicación en red, ya que actúan como
+                    conexión entre dos dispositivos físicos. Hace poco exploramos aspectos de la capa física y ahora nos
+                    sumergiremos en esta pieza esencial: ¡comprende cómo estos cables sencillos, pero eficaces mantienen
+                    el flujo de datos!</p>
+                <h2>¿Qué es el cable de par trenzado?</h2>
+                <p>Un <strong>cable par trenzado</strong> es un tipo de cable diseñado para proporcionar una
+                    comunicación sin interferencias, al tiempo que combate la diafonía entre hilos adyacentes. Alexander
+                    Graham Bell inventó este artefacto en 1881 y allí fue cuando las telecomunicaciones iniciaron una
+                    nueva era.</p>
+                <p>Con dos conductores eléctricos aislados entrelazados, este tipo de cable se utiliza en todo el mundo
+                    para transmitir señales de datos a través de largas distancias y garantizar un funcionamiento
+                    fiable; también contiene dos conductores eléctricos que están fabricados normalmente de cobre. Está
+                    diseñado para evitar la interferencia externa de señales y la diafonía de otros cables a su
+                    alrededor.</p>
+                <p>Al ser un dispositivo físico, este se ve limitado en sus propiedades de transmisión por la distancia.
+                    El rango en el cual se ve afectada la transmisión de información es de 100 metros. <img
+                        src="https://static.platzi.com/media/user_upload/54654-6c1c826c-1805-4808-aa36-fd708daa0759.jpg"
+                        alt="54654.jpg"></p>
+                <h2>Tipos de cable par trenzado</h2>
+                <p>Los tipos de cable par trenzado ofrecen una solución ideal para muchas aplicaciones de
+                    telecomunicación. Esto se debe a su versatilidad, fiabilidad y bajo costo.</p>
+                <h3>UTP</h3>
+                <p>El <strong>cable de par trenzado sin blindaje</strong> o <strong>UTP</strong> es un tipo de cable par
+                    trenzado que está compuesto por dos hilos conductores entrelazados entre sí. Su diámetro es mucho
+                    menor que el de los cables individuales, lo que reduce la susceptibilidad a las interferencias
+                    electromagnéticas, el ruido y la interferencia crosstalk. Esta característica hace que los cables
+                    UTP sean ideales para medios ambientes en los que no hay mucha interferencia.</p>
+                <h3>STP</h3>
+                <p>En cambio, los <strong>cables STP</strong>, o Cables de Par Trenzado con Blindaje, están compuestos
+                    por un par trenzado conformado por dos hilos conductor y recubierto con una malla metálica aislante.
+                    Esta malla es la encargada de prevenir interferencias electromagnéticas y algunos otros problemas de
+                    distorsión asociados a los cables UTP.</p>
+                <p>Estos cables permiten transmitir datos a velocidades muy elevadas - superiores a 10 GB/s - y son
+                    ampliamente utilizados en entornos industriales para conectar dispositivos dentro de redes locales,
+                    trabajos informáticos y circuitos electrónicos.</p>
+                <h3>FTP</h3>
+                <p>Los <strong>cables FTP</strong> o Cables de par trenzado con blindaje, son una variación del cable
+                    par trenzado convencional. Están compuestos por dos hilos conductores entrelazados, igual que en el
+                    caso de los cables UTP, pero incorporan un revestimiento metálico aislante alrededor de su
+                    estructura para mejorar la inmunidad ante interferencias externas.</p>
+                <p>Este recubrimiento metálico permite prevenir problemas de señal que pueden ser causados por
+                    dispositivos eléctricos o líneas telefónicas, lo que los hace especialmente útiles para entornos
+                    industriales y en los que hay mucha interferencia electromagnética.</p>
+                <h2>Categorías de cable par trenzado</h2>
+                <p>Existen diferentes categorías de cables de par trenzado. Estas categorías están divididas
+                    principalmente en las velocidades de transferencia que pueden realizar su ancho de banda y el
+                    blindaje que posee alrededor el cable para asegurar una mejor comunicación. Puedes ver más
+                    información en la siguiente tabla.</p>
+                <div class="img-container">
+                    <figure><img
+                            src="https://static.platzi.com/media/user_upload/categorias-00b70a07-1402-4f78-ad9a-d9d36d7abdad.jpg"
+                            alt="categorias.PNG"></figure>
+                </div>
+                <p>Las categorías que se usan normalmente para crear cables de red Ethernet son de la categoría 5 a la
+                    categoría 6 por su costo y manipulación. Los cables de categorías superiores se usan en otro tipo de
+                    infraestructuras, además de que su costo es mucho más elevado.</p>
+                <p>Para conectar dos dispositivos físicos en la red es necesario que al final de estos cables se inserte
+                    un conector RJ-45. Este conector cubrirá los 4 pares trenzados de cables asignando un pin a cada
+                    filamento, en total 8 pines numerados de la siguiente forma:</p>
+                <div class="img-container">
+                    <figure><img
+                            src="https://static.platzi.com/media/user_upload/pines-cb148d43-96dc-40ce-b4b9-3bc669083e28.jpg"
+                            alt="pines.PNG"></figure>
+                </div>
+                <h2>Crear la conexión de pines en un conector RJ-45</h2>
+                <p>Existen diferentes estándares que se pueden seguir para configurar el orden de los cables dentro de
+                    un conector RJ-45, los más comunes son el estándar T568A y T568B, el estándar más común de emplear
+                    es el T568A. La única diferencia entre estos dos estándares es la posición de los cables verdes y
+                    naranjas, cómo se ve a continuación:</p>
+                <div class="img-container">
+                    <figure><img
+                            src="https://static.platzi.com/media/user_upload/norma-7c7de5ab-f0db-49ae-8cec-301880ba7a5b.jpg"
+                            alt="norma.PNG"></figure>
+                </div>
+                <p>Una vez tienes configurados los pines dentro de tu conector, lo siguiente es sellar los cables con
+                    los pines a través de una herramienta especial llamada pinza ponchadora.</p>
+                <div class="img-container">
+                    <figure><img
+                            src="https://static.platzi.com/media/user_upload/pinz-978f6c27-be9d-452b-8e6c-9e03c2e06577.jpg"
+                            alt="pinz.PNG"></figure>
+                </div>
+                <p>Sin embargo, la información que sabemos hasta ahora no es suficiente para que nuestro cable de red
+                    funcione, para ello, debemos saber si los dispositivos son del mismo tipo, por ejemplo de un PC a
+                    otro PC. Si estos son diferentes (de un PC a un router) se usa una configuración diferente en cada
+                    extremo. Dependiendo del caso utilizaremos un cable directo o un cable cruzado.</p>
+                <h2>Cable directo</h2>
+                <p>Este cable se utiliza cuando queremos conectar un dispositivo de la red a un dispositivo de
+                    enrutamiento, como puede ser el caso de nuestra computadora al router de nuestra casa. Como puedes
+                    notar ambos dispositivos son diferentes.</p>
+                <p>La configuración de pines debe ser la misma en ambos extremos del cable, por lo que su dirección no
+                    cambia, ya sea que emplees el estándar T568A o el T568B. En la siguiente imagen puedes ver un
+                    ejemplo más claro:</p>
+                <div class="img-container">
+                    <figure><img
+                            src="https://static.platzi.com/media/user_upload/estremos-4b93a7f0-1c93-4ca8-94ea-b64524d3cb93.jpg"
+                            alt="estremos.PNG"></figure>
+                </div>
+                <h2>Cable cruzado</h2>
+                <p>Este cable se utiliza cuando queremos conectar dos dispositivos similares, como dos computadoras, dos
+                    routers o dos hubs. Se llama cruzado pues la dirección cambia de un extremo a otro.</p>
+                <p>La configuración de pines debe ser diferente en ambos extremos del cable y es aquí donde vemos la
+                    utilidad de que existan dos estándares diferentes. En un extremo emplearemos el estándar T568A y en
+                    el otro el T568B. En la siguiente imagen puedes ver un ejemplo más claro:</p>
+                <p><img src="https://static.platzi.com/media/user_upload/extremos2-9aa036e9-541f-470e-8c8a-7bc31844008f.jpg"
+                        alt="extremos2.PNG"><br>
+                    Ahora ya sabes de qué está hecho un cable de red y la importancia que tiene dentro de la capa
+                    física, incluso si quisieras podrías crear uno. Dejaremos eso para otra ocasión, y continuaremos
+                    explorando las diferentes capas de red.</p>
+                <p>¡Nos vemos en la siguiente clase!</p>
+            </div>
+        </div>
+    </div>
+    <!--- TERMINA El cable de par trenzado --->
+    <hr />
+    <!--- INICIA Capa de enlace de datos --->
+    <div class="root-container Resources-description">
+        <h1>Capítulo 17: Capa de enlace de datos</h1>
+        <div class="Resources">
+            <div class="Resources-description">
+                <p>La capa de enlace de datos es responsable de la transferencia fiable de información a través de un
+                    circuito de transmisión de datos. Es la segunda capa del <a
+                        href="https://platzi.com/clases/2225-redes/35587-modelo-osi/" target="_blank"
+                        rel=" noopener">modelo OSI</a>.</p>
+                <h2>¿Qué es la capa de enlace de datos?</h2>
+                <p>La capa de enlace de datos recibe peticiones de la capa de red y utiliza los servicios de la capa
+                    física.</p>
+                <p>Lo que hace esta capa para evitar errores es que divide los datos en “tramas” (unidad de envío de
+                    datos que verifica que no sean muy chicas [<a
+                        href="https://community.cisco.com/t5/other-network-architecture/what-is-a-giant-and-a-runt/td-p/85513"
+                        target="_blank" rel=" noopener">runts</a>] y ni muy grandes [<a
+                        href="https://community.cisco.com/t5/other-network-architecture/what-is-a-giant-and-a-runt/td-p/85513"
+                        target="_blank" rel=" noopener">giants</a>] ) haciéndola más confiable ya que también verifica
+                    que se hayan recibido bien los datos.</p>
+                <h2>Protocolos de la capa de enlace de datos</h2>
+                <h3><strong>Ethernet</strong></h3>
+                <p>Es un estándar de redes de área local para computadoras, por sus siglas en español Acceso Múltiple
+                    con Escucha de Portadora y Detección de Colisiones. Su nombre procede del concepto físico de éter.
+                </p>
+                <h4><strong>Subcapas LLC y MAC</strong></h4>
+                <p>Dentro de la capa de enlace de datos (DLL), la IEEE 802 seccionó la misma en dos sub-capas, la
+                    subcapa LLC (Logical Link Control) o subcapa de control de enlace lógico y la subcapa MAC (Media
+                    Access Control) o subcapa de control de acceso al medio.</p>
+                <p><strong>MAC:</strong> se refiere a los protocolos que sigue el host para acceder a los medios
+                    físicos, fijando así cuál de los computadores transmitirá datos binarios. Se encarga de la topología
+                    lógica de la red y del método de acceso a esta, cabe destacar que cada tecnología de red tiene una
+                    subcapa MAC diferente, y en esta residen las direcciones MAC.</p>
+                <p><strong>LLC:</strong> transporta los datos de protocolo de la red, un paquete IP, y agrega más
+                    información de control para ayudar a entregar ese paquete IP en el destino, agregando los
+                    componentes de direccionamiento: el Punto de Acceso al Servicio Destino (DSAP) y el Punto de Acceso
+                    al Servicio Fuente (SSAP). Luego este paquete IP reempaquetado viaja hacia la subcapa MAC para que
+                    la tecnología específica requerida le adicione datos y lo encapsule.</p>
+                <p><a href="https://www.mindmeister.com/es/711847057/funcionamiento-de-ethernet-subcapas-llc-y-mac"
+                        target="_blank" rel=" noopener">Referencias de MAC y LLC</a></p>
+                <h3><strong>VLAN (Virtual Local Area Network - Red de Área Local Virtual)</strong></h3>
+                <p>Método para crear redes lógicas independientes dentro de una misma red física.</p>
+                <h3><strong>ATM (Asyncronous Transfer Mode - Modo de Transferencia Asíncrona)</strong></h3>
+                <p>Transporte de una gama completa de tráfico de usuarios, incluidas las señales de voz, datos y video.
+                </p>
+                <h3><strong>HDP (Heterogeneous Data Protocol - Protocolo de Datos Heterogéneos)</strong></h3>
+                <p>Se considera como base para el intercambio de datos entre diferentes nodos en un sistema de software
+                    distribuido. Se propone una implementación software de este protocolo, que permite estandarizar la
+                    transmisión de datos manteniendo su mínimo volumen posible.</p>
+                <h3><strong>Frame Relay</strong></h3>
+                <p>Es una técnica de comunicación mediante retransmisión de tramas para redes de circuito virtual</p>
+                <h3><strong>HDLC (High-Level Data Link Control - Control de Enlace de Datos de Alto Nivel)</strong></h3>
+                <p>Es un protocolo de comunicaciones de propósito general punto a punto que opera a nivel de enlace de
+                    datos.</p>
+                <h3><strong>PPP (Point-to-Point Protocol - Protocolo de Punto a Punto)</strong></h3>
+                <p>Establece una conexión directa entre dos nodos de una red.</p>
+                <h3><strong>Q.921</strong></h3>
+                <p>Este protocolo multiplexa varias conexiones en un solo canal real entre usuarios.</p>
+                <h3><strong>Token Ring</strong></h3>
+                <p>Este testigo permite a cualquier estación emisora de la red (anillo) enviar datos cuando llega el
+                    testigo a esa ubicación.</p>
+                <p><em>Aporte creado por Brandon Verdeja</em></p>
+            </div>
+            <div class="FilesAndLinks">
+                <div></div>
+                <div></div>
+            </div>
+            <div class="RecommendedClasses">
+                <h4 class="RecommendedClasses-title">Clases relacionadas</h4>
+                <div class="RecommendedClasses-grid"><a class="RecommendedClasses-card RecommendedClasses-link"
+                        href="/clases/1912-intro-elasticsearch/28676-mapeo-de-datos/" target="_blank">
+                        <figure class="RecommendedClasses-card--thumbnail"><img
+                                src="https://mdstrm.com/thumbs/512e13acaca1ebcd2f000279/thumb_5ebdb8a4602c6707986f1687_5ebdb8a4602c6707986f1691_43s.jpg"
+                                alt="Mapeo de datos" loading="lazy"></figure>
+                        <div class="RecommendedClasses-card--content">
+                            <p class="RecommendedClasses-card--title">Mapeo de datos</p>
+                            <div class="RecommendedClasses-card--course">
+                                <figure class="RecommendedClasses-card--badge"><img
+                                        src="https://static.platzi.com/media/achievements/badge-introduccion-elastic-search-e0b80646-8264-449b-8787-1ba6e4f1d2e9.png"
+                                        alt="Curso de Introducción a Elasticsearch" loading="lazy"></figure>
+                                <p class="RecommendedClasses-card--text">Curso de Introducción a Elasticsearch</p>
+                            </div>
+                        </div>
+                    </a></div>
+            </div>
+        </div>
+    </div>
+    <!--- TERMINA Capa de enlace de datos --->
+    <hr />
+    <!--- INICIA ¿Qué es la dirección MAC? --->
+    <div class="root-container Resources-description">
+        <h1>Capítulo 17: ¿Qué es la dirección MAC?</h1>
+        <div class="MaterialLecture-text">
+            <p>Las <strong>direcciones MAC</strong> son una parte importante de la capa de enlace del <a
+                    href="https://platzi.com/clases/2225-redes/35587-modelo-osi/" target="_blank" rel=" noopener">modelo
+                    OSI</a>. Todas estas son únicas para cada dispositivo de red y se asignan por el fabricante durante
+                la producción. Además, estas direcciones son inmutables, lo que significa que no pueden ser modificadas
+                o eliminadas.</p>
+            <p>Se basan principalmente en un formato hexadecimal que identifica al fabricante del dispositivo a través
+                de los primeros bytes de la dirección. La mayoría de los sistemas operativos también contiene
+                herramientas específicas para gestionar las direcciones MAC y esto les permite controlar el tráfico que
+                entra desde y hacia los dispositivos conectados a la red.</p>
+            <h2>¿Qué es la dirección MAC?</h2>
+            <p>La <strong>dirección MAC</strong>, también conocida como Dirección de Control de Acceso al Medio, es un
+                identificador único de los dispositivos dentro de la red. Esta dirección se compone de una serie de
+                números y letras que se asignan a cada dispositivo de red, y se utiliza para garantizar que los datos se
+                envíen y reciban correctamente.</p>
+            <p>Además, cada uno de estos identificadores se asigna de forma exclusiva a un dispositivo de red, lo que
+                significa que ningún otro dispositivo en la red tendrá la misma dirección. Esto es importante para
+                garantizar que los datos se envíen y reciban de forma segura, y para evitar conflictos de red.</p>
+            <figure><img
+                    src="https://lh5.googleusercontent.com/yBJ8BLNYZl0dBSCUTWmeh81xsTsXWDPZ9FW0kPl-Jqn4myTU0KigwXoFxA96lKZZU8nHc-6Ctu-y3F379TKWGyTzBF_V0oraTOg5I1n_PvWh5ie56CxRd4aMhp6uVNvWrmi5iHR4"
+                    alt="imagen-mac"></figure>
+            <h2>¿Cómo puedo obtener el MAC desde distintos dispositivos?</h2>
+            <p>¿Te has preguntado quién se está conectando a tu red y desde qué dispositivos? A continuación descubrirás
+                cómo puedes averiguar la dirección MAC en una lista de dispositivos conectados a través del móvil u
+                ordenador.</p>
+            <h3>Obtener el MAC en Windows</h3>
+            <p>Estos son los pasos para encontrar la dirección MAC de tu ordenador utilizando el Símbolo del sistema:
+            </p>
+            <ol>
+                <li>Abre el Símbolo del sistema haciendo clic en Inicio y seleccionándolo.</li>
+                <li>Escribe “ipconfig/all” y presiona Enter.</li>
+                <li>Busca la sección que dice “Adaptador de LAN inalámbrica wifi”.</li>
+                <li>Dentro de ella, busca la “dirección física” para encontrar la dirección MAC.</li>
+            </ol>
+            <h3>Obtener el MAC en iOS</h3>
+            <p>Para obtener el MAC en iOS sigue estos pasos.</p>
+            <ol>
+                <li>Entra en la opción“Ajustes” en tu dispositivo iOS.</li>
+                <li>Desplázate hacia abajo y selecciona “General”.</li>
+                <li>Selecciona “Información” y luego “Wifi Address".</li>
+                <li>La dirección MAC de tu dispositivo iOS se mostrará en la pantalla.</li>
+            </ol>
+            <h3>Obtener el MAC en Android</h3>
+            <ol>
+                <li>Abre la aplicación “Ajustes” en tu dispositivo Android.</li>
+                <li>Desplázate hacia abajo y selecciona la opción “Acerca del teléfono” o “Acerca de la tablet”.</li>
+                <li>Busca la opción “Información del dispositivo” y selecciona “Estado”.</li>
+                <li>Desplázate hacia abajo y encontrarás la “Dirección MAC” bajo la sección “Dirección wifi”.</li>
+                <li>Toma nota de la dirección MAC o copia y pega en un lugar seguro si la necesitas más tarde.</li>
+                <li>Si no encuentras la dirección MAC en la sección “Estado”, busca la opción “Conexiones” o “wifi” en
+                    el menú de ajustes y busca la opción “Configuración avanzada” para encontrar la dirección MAC.</li>
+                <li>Si tienes un dispositivo con Android 6.0 o superior, es posible que se te solicite permiso para
+                    acceder a la ubicación del dispositivo antes de poder ver la dirección MAC. En ese caso, otorga el
+                    permiso para continuar.</li>
+                <li>Una vez que hayas encontrado la dirección MAC, puedes cerrar la aplicación “Ajustes”.</li>
+            </ol>
+            <h3>Obtener el MAC en macOS</h3>
+            <ol>
+                <li>Haz clic en el ícono de Apple en la esquina superior izquierda de la pantalla y selecciona
+                    “Preferencias del sistema”.</li>
+                <li>Selecciona “Red” en la ventana de Preferencias del sistema.</li>
+                <li>Selecciona la conexión de red que estás utilizando (Ethernet o wifi) en el panel izquierdo de la
+                    ventana.</li>
+                <li>Haz clic en el botón “Avanzado” en la esquina inferior derecha de la ventana.</li>
+                <li>Selecciona la pestaña “Hardware”.</li>
+                <li>La dirección MAC se encuentra en la opción “Dirección Ethernet” o “Dirección wifi”, según la
+                    conexión de red que estés usando.</li>
+                <li>Toma nota de la dirección MAC o copia y pega en un lugar seguro si la necesitas más tarde.</li>
+                <li>Cierra la ventana de Preferencias del sistema una vez que hayas encontrado la dirección MAC.</li>
+            </ol>
+            <p>Con esto tienes los conocimientos necesarios para describir lo que es una dirección MAC y cómo es que
+                está asociada a todos los dispositivos conectados de manera única a una red.</p>
+        </div>
+    </div>
+    <!--- TERMINA ¿Qué es la dirección MAC? --->
+    <hr />
+    <!--- INICIA Capa de red --->
+    <div class="root-container Resources-description">
+        <h1>Capítulo 17: Capa de red</h1>
+        <div class="Resources">
+            <div class="Resources-description">
+                <p>Ahora vamos a explorar la tercera capa del <a
+                        href="https://platzi.com/clases/2225-redes/35587-modelo-osi/" target="_blank"
+                        rel=" noopener">modelo OSI</a> que está encargada de enrutar los datos a través de diferentes
+                    redes. Si en la capa primera la información se envía en bits, en la segunda se transforma a tramas y
+                    la tercera en paquetes.</p>
+                <h2>¿Qué es la capa de red?</h2>
+                <p>La <strong>capa de red</strong> es el tercer nivel que se encarga del direccionamiento de los
+                    paquetes, la solución de problemas de congestión y la compatibilidad de protocolos entre diferentes
+                    puntos. También puede resolver problemas de conexión entre redes, congestión de paquetes y problemas
+                    del receptor o remitente.</p>
+                <p>Al diseñar esta capa, es importante resolver problemas de congestión e incompatibilidad de
+                    protocolos. Debe permitir que el receptor acepte los paquetes sin problemas.</p>
+                <figure><img
+                        src="https://static.platzi.com/media/user_upload/capa-de-red-3848ad0b-6c79-4832-a355-14ddf72d024b.jpg"
+                        alt="capa-de-red.png"></figure>
+                <h2>Protocolos de la capa de red</h2>
+                <p>A continuación conocerás los distintos protocolos que puedes encontrar en la capa de red.</p>
+                <h3>1. Internet Protocol (IP)</h3>
+                <p>El Protocolo de Internet (IP) es el protocolo de comunicación utilizado para enviar y recibir datos a
+                    través de redes. La capa de red utiliza IP para enrutar los paquetes de datos a través de diferentes
+                    redes.</p>
+                <h3>2. <strong>Border Gateway Protocol</strong></h3>
+                <p>En cambio, el protocolo de Puerta de Enlace de Borde (BGP) es un protocolo de enrutamiento que se
+                    emplea entre los proveedores de servicios de Internet (ISP) para intercambiar información de
+                    enrutamiento. BGP es esencial para mantener la conectividad entre diferentes redes de ISP.</p>
+                <h3>3. <strong>Internet Control Message Protocol</strong></h3>
+                <p>El Protocolo de Mensajes de Control de Internet (ICMP) se usa para enviar mensajes de error y control
+                    de la red. ICMP se emplea a menudo para realizar ping a otros dispositivos de red y verificar si
+                    están en línea.</p>
+                <h3>4. <strong>Open Shortest Path First</strong></h3>
+                <p>Por último, pero no menos importante, un protocolo de red para encaminamiento jerárquico de pasarela
+                    interior o Interior Gateway Protocol que utiliza el algoritmo&nbsp;<a
+                        href="https://es.wikipedia.org/wiki/Algoritmo_de_Dijkstra" target="_blank"
+                        rel=" noopener">Dijkstra</a>&nbsp;para calcular la ruta más corta entre dos nodos.</p>
+                <p>A<em>porte por: Brandon Verdeja, Henry Velásquez, Gabriel Martínez</em></p>
+            </div>
+            <div class="FilesAndLinks">
+                <div></div>
+                <div></div>
+            </div>
+            <div class="RecommendedClasses">
+                <div class="RecommendedClasses-grid"></div>
+            </div>
+        </div>
+    </div>
+    <!--- TERMINA Capa de red --->
+    <hr />
+    <!--- INICIA Capa de transporte --->
+    <div class="root-container Resources-description">
+        <h1>Capítulo 17: Capa de transporte</h1>
+        <div class="Resources">
+            <div class="Resources-description">
+                <p>La capa de transporte es el cuarto nivel del <a
+                        href="https://platzi.com/clases/2225-redes/35587-modelo-osi/" target="_blank"
+                        rel=" noopener">modelo OSI</a> que sirve para regular el flujo de información desde el origen
+                    hasta el destino.</p>
+                <h2>¿Que es la capa de transporte?</h2>
+                <p>La capa de transporte es responsable de la transmisión de datos a través de la red. En este nivel,
+                    los datos no conceptualizan en términos de paquetes individuales, sino más bien en términos de una
+                    conversación. Para lograr esto, se utilizan protocolos que se definen como “reglas de la
+                    comunicación.</p>
+                <p>Los protocolos ven la transmisión completa de los muchos paquetes comprobando los errores en la
+                    conversación, reconociendo las transmisiones exitosas y solicitando la retransmisión de las mismas
+                    si se detectan errores.</p>
+                <p>La capa de red y la capa de transporte trabajan en conjunto como un sistema postal. La capa de red se
+                    ocupa de direccionar los datos, al igual que una persona se direcciona un sobre. A continuación, la
+                    capa de transporte actúa como la oficina local de correos del remitente, ordenando y agrupando todos
+                    los datos con la misma dirección de manera similar en envíos más grandes con destino a otras
+                    oficinas locales, donde estos datos serán entregados.</p>
+                <h2><strong>Protocolos de la capa de transporte</strong></h2>
+                <h3><strong>SCTP (Stream Control Transmission Protocol - Protocolo de Transmisión de Control de
+                        Flujo)</strong></h3>
+                <p>Es un protocolo de comunicación.</p>
+                <h3><strong>SSL (Secure Socket Layer - Capa de Puertos Seguros)</strong></h3>
+                <p>El protocolo SSL es el predecesor del protocolo TLS y la tecnología estándar para mantener segura una
+                    conexión a Internet, así como para proteger cualquier información confidencial que se envía entre
+                    dos sistemas e impedir que los delincuentes lean y modifiquen cualquier dato que se transfiera,
+                    incluida información que pudiera considerarse personal.</p>
+                <p>Los dos sistemas pueden ser un servidor y un cliente (por ejemplo, un sitio web de compras y un
+                    navegador) o de servidor a servidor (por ejemplo, una aplicación con información que puede
+                    identificarse como personal o con datos de nóminas).</p>
+                <h3><strong>TLS (Transport Layer Security - Seguridad de la Capa de Transporte)</strong></h3>
+                <p>Se trata de protocolos criptográficos que proporcionan privacidad e integridad en la comunicación
+                    entre dos puntos en una red de comunicación. Esto garantiza que la información transmitida por dicha
+                    red no pueda ser interceptada ni modificada por elementos no autorizados, garantizando de esta forma
+                    que sólo los emisores y los receptores legítimos sean los que tengan acceso a la comunicación de
+                    manera íntegra.</p>
+                <h3>TCP (<strong><em>Transmission Control Protocol)</em></strong></h3>
+                <p>Prioriza confiabilidad sobre rapidez, verifica del mensaje.</p>
+                <h3>UDP (User Datagram Protocol)</h3>
+                <p>Prioriza rapidez sobre confiabilidad, solo envia el mensaje.</p>
+                <p><em>Aporte por Abhay Rojas, Alejandra Espinosa, Brandon Verdeja.</em></p>
+            </div>
+            <div class="FilesAndLinks">
+                <div></div>
+                <div></div>
+            </div>
+            <div class="RecommendedClasses">
+                <div class="RecommendedClasses-grid"></div>
+            </div>
+        </div>
+    </div>
+    <!--- TERMINA Capa de transporte --->
+    <hr />
 </body>
 
 </html>
