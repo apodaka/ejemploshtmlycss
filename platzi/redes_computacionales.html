@@ -475,6 +475,221 @@
         </div>
     </div>
     <!--- TERMINA Protocolos de red --->
+    <!--- INICIA Modelo TCP/IP --->
+    <div class="root-container Resources-description">
+        <h1>Capítulo 8: Modelo TCP/IP</h1>
+        <div class="Resources">
+            <div class="Resources-description">
+                <p>El <strong>modelo TCP</strong> (Protocolo de control de transmisión) es un conjunto de directrices
+                    que establecen las formas de los mensajes y los pasos necesarios para que los dispositivos y los
+                    programas se comuniquen entre sí. Estos se deben cumplir para asegurar una correcta interpretación
+                    del mensaje recibido y, como modelo, fue desarrollado hace más de 30 años, para garantizar la
+                    precisión y uniformidad de los intercambios de datos.</p>
+                <p>El conjunto de protocolos TCP/IP se compone de cinco niveles: la capa de aplicación, transporte, red,
+                    interfaz de red y hardware. Cada uno tiene su propia función particular para garantizar una
+                    comunicación adecuada entre los dispositivos conectados a la misma red. Pero, ¿cómo funciona
+                    realmente este modelo? Exploremos sus cuatro capas desde la base</p>
+                <h2>¿Cómo funciona el modelo TCP/IP?</h2>
+                <p>Este modelo cuenta con 4 capas. Te las enumeramos de abajo hacia arriba:</p>
+                <ul>
+                    <li>Capa 1 (Interfaz de red)</li>
+                    <li>Capa 2 (internet)</li>
+                    <li>Capa 3 (Transporte)</li>
+                    <li>Capa 4 (Aplicación)</li>
+                </ul>
+                <figure><img
+                        src="https://static.platzi.com/media/user_upload/Captura%20de%20Pantalla%202022-01-26%20a%20la%28s%29%205.30.22%20p.m.-8d0a2556-7853-45b8-b910-7cc4aa4ab30f.jpg"
+                        alt="modelo TCP-IP.png"></figure>
+                <p>Profundicemos en cada una de ellas.</p>
+                <h2>¿Cuáles son las capas del modelo TCP/IP?</h2>
+                <p>El modelo TCP/IP tiene cuatro capas para comunicaciones en redes. Cada capa describe un conjunto de
+                    guías generales.</p>
+                <h3>Capa 1: interfaz de red</h3>
+                <p>La primera capa es el nivel más bajo de comunicación que está conformado por pulsaciones eléctricas o
+                    transporte físico. Este protocolo&nbsp;<em>no</em>&nbsp;se encarga de establecer la comunicación
+                    entre 2 puntos, únicamente de transmitir en el medio físico</p>
+                <p>Tiene protocolos como:</p>
+                <ol>
+                    <li><strong>ARP:</strong> Address Resolution Protocol. Encuentra la MAC de las IP</li>
+                    <li><strong>Ethernet:</strong> tecnología tradicional para conectar dispositivos en una red LAN.
+                    </li>
+                    <li><strong>NDP:</strong> Neighbor Discovery Protocol. Resolución de direcciones y permite a un
+                        dispositivo integrarse al ambiente local (una red física).</li>
+                    <li><strong>L2TP:</strong> Layer 2 Tunneling Protocol. Corrige deficiencias de otros protocolos.
+                    </li>
+                </ol>
+                <h3>Capa 2: internet</h3>
+                <p>Se encarga de comunicar dos host para transmitir los datos, estable la ruta para que llegue la
+                    información al punto deseado.</p>
+                <p>Tiene protocolos como:</p>
+                <ol>
+                    <li><strong>IP:</strong> Internet Protocol. Para la identificación y comunicación.</li>
+                    <li><strong>ICMP:</strong> Internet Control Message Protocol</li>
+                    <li><strong>IPSEC:</strong> Internet Protocol security. Son varios protocolos que autentican al IP y
+                        cifran los paquetes.</li>
+                    <li><strong>IGMP:</strong> Internet Group Management Protocol. Multidifusión.</li>
+                </ol>
+                <h3>Capa 3: transporte</h3>
+                <p>Se encarga de transferir los archivos entre los dos host, para esto existen varios protocolos, por
+                    ejemplo, el protocolo “TCP” que se encarga de transmitir los datos priorizando la fiabilidad de los
+                    mismos (que no se pierda información en el camino)-</p>
+                <p>Por otro lado, el protocolo “UDP” que se encarga de la velocidad de transmisión de datos antes que la
+                    fiabilidad del mismo (prefiere mandar los datos lo más rápido posible aunque pierda algo de
+                    información en el camino).</p>
+                <p>Sus protocolos principales son: TCP y UDP</p>
+                <ul>
+                    <li><strong>TCP:</strong> Transmission Control Protocol. Controla la transmisión de la información.
+                    </li>
+                    <li><strong>DCCP:</strong> Datagram Congestion Control Protocol. Transporte de mensajes.</li>
+                    <li><strong>MTP:</strong> Micro Transport Protocol. Conexiones peer to peer.</li>
+                    <li><strong>UDP:</strong> User Datagram Protocol. Mínimo de transporte de mensajes.</li>
+                    <li><strong>ICMP:</strong> Internet Control Message Protocol. mensajes de error e información
+                        operativa.</li>
+                    <li><strong>FCP:</strong> Fibre Channel protocol. Carga el S.O y la verificación.</li>
+                </ul>
+                <h3>Capa 4: aplicación</h3>
+                <p>Ofrece a las aplicaciones (de usuario o no) la posibilidad de acceder a los servicios de las demás
+                    capas y define los protocolos que utilizan las aplicaciones para intercambiar datos, como correo
+                    electrónico (POP y SMTP), gestores de bases de datos y protocolos de transferencia de archivos
+                    (FTP).</p>
+                <p>Tiene protocolos como:</p>
+                <ul>
+                    <li><strong>FTP:</strong> File Transfer Protocol. Transferencia de archivos.</li>
+                    <li><strong>SSH:</strong> Secure Shell. Es para las conexiones seguras.</li>
+                    <li><strong>SMTP:</strong> Simple Mail Transfer Protocol. Asigna dinámicamente la IP y otros
+                        parámetros.</li>
+                    <li><strong>DHCP:</strong> Dinamic Host Configuration Protocol. Es una manera de establecer una
+                        conexión y verificar que todo ocurrió correctamente.</li>
+                    <li><strong>DNS:</strong> Domain Name System. Le asigna nombres a las IP de los dominios y se
+                        encarga de traducirlos.</li>
+                    <li><strong>RIP:</strong> Routing Information Protocol.</li>
+                    <li><strong>SNMP:</strong> Simple Network Management Protocol.</li>
+                    <li><strong>HTTP:</strong> Hypertext Transfer Protocol.</li>
+                </ul>
+                <h2>Diferencia entre TCP Y UDP</h2>
+                <p><strong><em>TCP:</em></strong></p>
+                <ul>
+                    <li>Es confiable</li>
+                    <li>Está orientado a la conexión</li>
+                    <li>Se espera que siempre exista la conexión entre 2 computadoras</li>
+                    <li>Importa la confiabilidad sobre la rapidez</li>
+                </ul>
+                <p>Un ejemplo claro es la transferencia de archivos.</p>
+                <p><strong><em>UDP:</em></strong></p>
+                <ul>
+                    <li>No es confiable</li>
+                    <li>No está orientado a la conexión</li>
+                    <li>No se “preocupa” si llegaron o no los datos</li>
+                </ul>
+                <p>Un ejemplo para la diferencia entre TCP y UDP. TCP es por ejemplo un mail en el que necesitamos que
+                    llegue el mensaje completo y por el contrario UDP cuando jugamos un juego en línea y necesitamos que
+                    la información llegue lo más rápido posible y no nos importa si se pierde una parte de los datos.
+                </p>
+                <p><em>Aporte basado en notas de: Brandon Verdeja, Maximiliano Ovando, Mauricio Osorio y Pablo23.</em>
+                </p>
+            </div>
+            <div class="FilesAndLinks">
+                <div></div>
+                <div></div>
+            </div>
+            <div class="RecommendedClasses">
+                <div class="RecommendedClasses-grid"></div>
+            </div>
+        </div>
+    </div>
+    <!--- TERMINA Modelo TCP/IP --->
+    <hr />
+    <!--- INICIA Identificando las redes: IP y su estructura --->
+    <div class="root-container Resources-description">
+        <h1>Capítulo 9: Identificando las redes: IP y su estructura</h1>
+        <div class="Resources">
+            <div class="Resources-description">
+                <p>IP significa Internet Protocol. Es la manera en la que las computadoras se identifican en internet.
+                </p>
+                <h2>¿Qué es protocolo IP?</h2>
+                <p>El protocolo IP se encarga principalmente del ruteo. Es la manera en la que se va a transmitir la
+                    información o los caminos que van a tomar.</p>
+                <ul>
+                    <li>Este protocolo tiene ciertos rangos para asignar las IP</li>
+                    <li>Dentro de tu red también puedes establecer una mascara de sub-red, que es una manera de
+                        establecer límites entre los hosts que se pueden tomar.</li>
+                </ul>
+                <h2>Estructura de una dirección IP</h2>
+                <p>Una IP(IPv4) está compuesta de 4 octetos. Los primeros 3 octetos de una IP(IPv4) representan la
+                    dirección de red.</p>
+                <p>La siguiente es una descripción gráfica de los componentes de <a
+                        href="https://platzi.com/clases/1098-ingenieria/6559-que-es-una-direccion-ip-y-el-protocolo-de-internet/"
+                        target="_blank" rel=" noopener">una dirección IP</a>:</p>
+                <figure><img
+                        src="https://static.platzi.com/media/user_upload/Captura%20de%20Pantalla%202022-01-26%20a%20la%28s%29%206.04.50%20p.m.-195ccb34-6e35-4a07-8827-31836f7cc2d5.jpg"
+                        alt="estructura IP.png"></figure>
+                <h2>Ejemplo de una dirección IP</h2>
+                <p>Las IP en la versión IPv4 están conformadas por 4 secciones de 1 byte.</p>
+                <p>Cada byte está compuesto por 8 bits.</p>
+                <p>El valor de cada sección está relacionado a los bits positivos o verdaderos.</p>
+                <p>Ej. 10100100 = 1 + 0 + 1 + 0 + 0 + 1 + 0 + 0</p>
+                <p>Se suma las posiciones contando de derecha a izquerda.donde la posición más a la derecha, representa
+                    el exponencial 0 del número 2. Y el número más a la izquierda será el exponencial 7</p>
+                <p>Num. Binario 1 0 1 0 0 1 0 0</p>
+                <p>Posición: 8 7 6 5 4 3 2 1</p>
+                <p>Indice o Exp: 7 6 5 4 3 2 1 0</p>
+                <p>Calcular los que tengan 1: + - + - - + - -</p>
+                <p>Se toma el 2 porque hablamos del sistema de numeración binaria. Sólo contiene 2 dígitos, los cuales
+                    son 0,1</p>
+                <p>Entonces para el ejemplo anterior tenemos: Ej. 10100100 = 1 + 0 + 1 + 0 + 0 + 1 + 0 + 0</p>
+                <p>Leyendo desde la derecha tomamos en cuenta los valores 1:Posición 3, índice 2, Valor= 4 (2 elevado a
+                    la 2 , 2^2 )Posición 6, índice 5, Valor= 32 (2 elevado a la 5, 2^5)Posición 8, índice 7, Valor= 128
+                    (2 elevado a la 7, 2^7)</p>
+                <p>Valor en sistema decimal de 10100100 = 164</p>
+                <p><em>Aporte basado en notas de: Tania Fernandez, Cesar Victoria, SEBASSD</em></p>
+            </div>
+            <div class="FilesAndLinks">
+                <div></div>
+                <h4 class="FilesAndLinks-title">Lecturas recomendadas</h4>
+                <div><a class="FilesAndLinks-item" href="https://platzi.com/clases/ingenieria/" target="_blank">
+                        <div class="FilesAndLinks-item--link">
+                            <figure class="FilesAndLinks-item--favicon"><img
+                                    src="https://www.google.com/s2/favicons?domain=https://static.platzi.com/static/images/logos/platzi_favicon.png"
+                                    alt="" loading="lazy"></figure>
+                            <div>
+                                <p>Curso de Fundamentos de Ingeniería de Software - Platzi</p>
+                                <p class="FilesAndLinks-item--url">https://platzi.com/clases/ingenieria/</p>
+                            </div>
+                        </div><svg aria-hidden="true" focusable="false" data-prefix="far"
+                            data-icon="arrow-up-right-from-square"
+                            class="svg-inline--fa fa-arrow-up-right-from-square FilesAndLinks-item--download" role="img"
+                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                            <path fill="currentColor"
+                                d="M304 24c0 13.3 10.7 24 24 24H430.1L207 271c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l223-223V184c0 13.3 10.7 24 24 24s24-10.7 24-24V24c0-13.3-10.7-24-24-24H328c-13.3 0-24 10.7-24 24zM72 32C32.2 32 0 64.2 0 104V440c0 39.8 32.2 72 72 72H408c39.8 0 72-32.2 72-72V312c0-13.3-10.7-24-24-24s-24 10.7-24 24V440c0 13.3-10.7 24-24 24H72c-13.3 0-24-10.7-24-24V104c0-13.3 10.7-24 24-24H200c13.3 0 24-10.7 24-24s-10.7-24-24-24H72z">
+                            </path>
+                        </svg>
+                    </a><a class="FilesAndLinks-item" href="https://www.internetsociety.org/deploy360/ipv6/"
+                        target="_blank">
+                        <div class="FilesAndLinks-item--link">
+                            <figure class="FilesAndLinks-item--favicon"><img
+                                    src="https://www.google.com/s2/favicons?domain=https://www.internetsociety.org/wp-content/themes/isoc/dist/images/favicon/apple-icon-57x57.png"
+                                    alt="" loading="lazy"></figure>
+                            <div>
+                                <p>IPv6 Basics, News, Guides &amp; Tutorials | Internet Society</p>
+                                <p class="FilesAndLinks-item--url">https://www.internetsociety.org/deploy360/ipv6/</p>
+                            </div>
+                        </div><svg aria-hidden="true" focusable="false" data-prefix="far"
+                            data-icon="arrow-up-right-from-square"
+                            class="svg-inline--fa fa-arrow-up-right-from-square FilesAndLinks-item--download" role="img"
+                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                            <path fill="currentColor"
+                                d="M304 24c0 13.3 10.7 24 24 24H430.1L207 271c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l223-223V184c0 13.3 10.7 24 24 24s24-10.7 24-24V24c0-13.3-10.7-24-24-24H328c-13.3 0-24 10.7-24 24zM72 32C32.2 32 0 64.2 0 104V440c0 39.8 32.2 72 72 72H408c39.8 0 72-32.2 72-72V312c0-13.3-10.7-24-24-24s-24 10.7-24 24V440c0 13.3-10.7 24-24 24H72c-13.3 0-24-10.7-24-24V104c0-13.3 10.7-24 24-24H200c13.3 0 24-10.7 24-24s-10.7-24-24-24H72z">
+                            </path>
+                        </svg>
+                    </a></div>
+            </div>
+            <div class="RecommendedClasses">
+                <div class="RecommendedClasses-grid"></div>
+            </div>
+        </div>
+    </div>
+    <!--- TERMINA Identificando las redes: IP y su estructura --->
+    <hr />
     <!-- INICIA Modelo TCP / IP -->
     <div class=" root-container Resources-description">
         <h1>Cap&iacute;tulo 8: Model TCP/IP</h1>
@@ -747,7 +962,7 @@
     <!-- TERMINA Clases de redes: asignación direcciones IP -->
     <!--- INICIA Qué es el Modelo OSI --->
     <div class="root-container Resources-description">
-        <h1>Capítulo 13: Qué es el Modelo OSI</h1>
+        <h1>Capítulo 11: Qué es el Modelo OSI</h1>
         <div class="Resources-description">
             <p>El <strong>modelo OSI</strong> es un marco utilizado para comprender cómo funcionan juntos los diferentes
                 sistemas de comunicación. Divide el proceso de envío y recepción de datos a través de una red en siete
@@ -856,7 +1071,7 @@
     <hr />
     <!--- INICIA Capa Física --->
     <div class="root-container Resources-description">
-        <h1>Capítulo 13: Capa Física</h1>
+        <h1>Capítulo 12: Capa Física</h1>
         <div class="Resources-description">
             <p>En esta capa se encuentra todo lo físico, el hardware (componentes eléctricos, electrónicos,
                 electromecánicos y mecánicos) cables, electricidad, etc.</p>
@@ -898,7 +1113,7 @@
     <hr />
     <!--- INICIA El cable de par trenzado --->
     <div class="root-container Resources-description">
-        <h1>Capítulo 17: El cable de par trenzado</h1>
+        <h1>Capítulo 13: El cable de par trenzado</h1>
         <div class="MaterialLecture">
             <div class="MaterialLecture-text">
                 <p>Los <strong>cables de par trenzado</strong> son el alma de la comunicación en red, ya que actúan como
@@ -1017,7 +1232,7 @@
     <hr />
     <!--- INICIA Capa de enlace de datos --->
     <div class="root-container Resources-description">
-        <h1>Capítulo 17: Capa de enlace de datos</h1>
+        <h1>Capítulo 14: Capa de enlace de datos</h1>
         <div class="Resources">
             <div class="Resources-description">
                 <p>La capa de enlace de datos es responsable de la transferencia fiable de información a través de un
@@ -1105,7 +1320,7 @@
     <hr />
     <!--- INICIA ¿Qué es la dirección MAC? --->
     <div class="root-container Resources-description">
-        <h1>Capítulo 17: ¿Qué es la dirección MAC?</h1>
+        <h1>Capítulo 15: ¿Qué es la dirección MAC?</h1>
         <div class="MaterialLecture-text">
             <p>Las <strong>direcciones MAC</strong> son una parte importante de la capa de enlace del <a
                     href="https://platzi.com/clases/2225-redes/35587-modelo-osi/" target="_blank" rel=" noopener">modelo
@@ -1184,7 +1399,7 @@
     <hr />
     <!--- INICIA Capa de red --->
     <div class="root-container Resources-description">
-        <h1>Capítulo 17: Capa de red</h1>
+        <h1>Capítulo 16: Capa de red</h1>
         <div class="Resources">
             <div class="Resources-description">
                 <p>Ahora vamos a explorar la tercera capa del <a
